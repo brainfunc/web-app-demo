@@ -1,0 +1,74 @@
+div.sidebar-button {
+  border-radius: 0px;
+  border-left: 3px solid #555555;
+  border-top: 0px;
+  border-bottom: 0px;
+  color: #555555;
+  background-color: white;
+  padding: 0.75vw;
+  padding-top: 0.25vw;
+  padding-bottom: 0.25vw;
+  width: 12vw;
+  height: auto;
+  font-family: "Avenir", sans-serif;
+  font-weight: 500;
+  font-size: 1.65vw;
+  text-align: left;
+  margin-bottom: 2vw;
+  margin-top: 2.5vw;
+  margin-left: 1vw; }
+
+div.sidebar-button:hover {
+  cursor: pointer;
+  border-color: #ffbb58; }
+
+div.sidebar-button.selected {
+  color: #ffbb58;
+  cursor: pointer; }
+
+div.action-button-footer {
+  display: inline;
+  float: left;
+  width: 100%;
+  padding-top: 4vw;
+  overflow: hidden; }
+  div.action-button-footer > div.footer-image-container {
+    display: inline;
+    float: left;
+    width: 7%;
+    padding: 1vw; }
+    div.action-button-footer > div.footer-image-container > img.footer-image {
+      display: inline;
+      float: left;
+      max-width: 100%; }
+  div.action-button-footer > div.footer-image-container.left {
+    margin-left: 23%; }
+  div.action-button-footer > div.footer-image-container.right {
+    float: right;
+    margin-right: 23%; }
+  div.action-button-footer > div.action-button-wrapper {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 40%;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+    overflow: hidden;
+    margin-bottom: 2%; }
+    div.action-button-footer > div.action-button-wrapper > button.action-button {
+      width: 90%;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      padding-top: 0.45vw;
+      padding-bottom: 0.45vw;
+      color: white;
+      background-color: #468ee5;
+      border: 2px solid #2966ae;
+      border-radius: 1vw;
+      box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.1);
+      font-family: "Avenir", sans-serif;
+      font-size: 1.75vw;
+      font-weight: 400;
+      outline: none; }
+    div.action-button-footer > div.action-button-wrapper > button.action-button:hover {
+      opacity: 0.75; }

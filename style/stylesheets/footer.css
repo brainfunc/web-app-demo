@@ -1,0 +1,102 @@
+.aae-section__container.footer {
+  background-color: #f3f1ee;
+  border-top: 2px solid #f3f1ee;
+  padding: 32px;
+  padding-left: 96px;
+  padding-top: 64px; }
+  .aae-section__container.footer > div.sub-section.footer {
+    width: 25%;
+    display: inline;
+    float: left; }
+    .aae-section__container.footer > div.sub-section.footer > div.tech-message-wrapper > div.tech-message {
+      font-family: "Calibre", sans-serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #484848;
+      margin-bottom: 4%;
+      margin-left: 8%;
+      opacity: 0.6; }
+      .aae-section__container.footer > div.sub-section.footer > div.tech-message-wrapper > div.tech-message > img.heart-icon {
+        margin-left: 16px;
+        height: 28px;
+        width: 28px;
+        opacity: 0.8; }
+    .aae-section__container.footer > div.sub-section.footer > div.tech-image-wrapper {
+      width: 100%;
+      text-align: center; }
+      .aae-section__container.footer > div.sub-section.footer > div.tech-image-wrapper > img.tech-image {
+        margin-right: 0%;
+        margin-top: 0%;
+        display: inline;
+        float: left;
+        width: 80px;
+        max-height: 72px; }
+    .aae-section__container.footer > div.sub-section.footer > ul {
+      list-style-type: none;
+      padding-left: 0; }
+      .aae-section__container.footer > div.sub-section.footer > ul > li {
+        font-family: "Avenir next", sans-serif;
+        font-size: 14px; }
+        .aae-section__container.footer > div.sub-section.footer > ul > li > a {
+          text-decoration: none;
+          color: #767676; }
+        .aae-section__container.footer > div.sub-section.footer > ul > li > a:hover {
+          text-decoration: underline; }
+      .aae-section__container.footer > div.sub-section.footer > ul > li.list-heading {
+        color: #484848;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 12px; }
+
+.aae-section__container.notice {
+  padding: 16px;
+  background-color: #f3f1ee; }
+  .aae-section__container.notice > div.divider {
+    background-color: #d8d8d8;
+    height: 2px;
+    margin: 96px;
+    margin-bottom: 16px;
+    margin-top: 0%; }
+  .aae-section__container.notice > div.sub-section.notice {
+    font-family: "Avenir next", sans-serif;
+    font-size: 14px;
+    color: #767676;
+    text-align: center;
+    margin-bottom: 8px; }
+    .aae-section__container.notice > div.sub-section.notice > div.component {
+      width: 50%;
+      text-decoration: none;
+      display: inline;
+      float: left; }
+    .aae-section__container.notice > div.sub-section.notice > div.component.left {
+      padding-right: 2%;
+      text-align: right; }
+    .aae-section__container.notice > div.sub-section.notice > div.component.right {
+      padding-left: 2%;
+      text-align: left; }
+
+@media (max-width: 1024px) {
+  .aae-section__container.footer > div.sub-section.footer > div.tech-message-wrapper > div.tech-message {
+    font-size: 1.35em; } }
+
+@media (max-width: 768px) {
+  .aae-section__container.footer > div.sub-section.footer {
+    width: 33%;
+    margin-bottom: 4%; }
+  .aae-section__container.footer > div.sub-section.footer:last-child {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0%; }
+    .aae-section__container.footer > div.sub-section.footer:last-child > div.tech-image-wrapper > img.tech-image {
+      width: 33%; } }
+
+@media (max-width: 512px) {
+  .aae-section__container.footer {
+    padding-left: 32px; }
+    .aae-section__container.footer > div.sub-section.footer:last-child {
+      margin-top: 4%; } }
+
+@media (max-width: 400px) {
+  .aae-section__container.footer > div.sub-section.footer {
+    width: 100%;
+    text-align: center; } }

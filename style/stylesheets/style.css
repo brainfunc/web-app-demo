@@ -1,0 +1,13 @@
+body {
+  background-color: white; }
+
+::placeholder {
+  color: #9b9b9b;
+  opacity: 0.35; }
+
+.app__container {
+  width: 100vw; }
+
+.aae__container {
+  width: 100%;
+  background-color: white; }

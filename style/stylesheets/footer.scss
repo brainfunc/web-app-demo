@@ -1,0 +1,152 @@
+@import "../constants/constants.scss";
+
+.aae-section__container.footer {
+	background-color: $background_color_cream;
+	//background-color: transparent;
+	border-top: 2px solid $background_color_cream;
+	//background-image: linear-gradient(
+	//	to bottom,
+	//	$linear_gradient_color_1,
+	//	$linear_gradient_color_2),
+	// url('');
+	padding: 32px;
+	padding-left: 96px;
+	padding-top: 64px;
+	>div.sub-section.footer {
+		width:25%;
+		display: inline;
+		float: left;
+		>div.tech-message-wrapper {
+			>div.tech-message {
+				font-family: $font_family_4;
+				font-size: 1.5em;
+				font-weight: 600;
+				color: #484848;
+				margin-bottom: 4%;
+				margin-left: 8%;
+				opacity: 0.6;
+				>img.heart-icon {
+					margin-left:16px;
+					height: 28px;
+					width: 28px;
+					opacity: 0.8;
+				}
+			}
+		}
+		>div.tech-image-wrapper {
+			width: 100%;
+			text-align: center;
+			>img.tech-image {
+				margin-right: 0%;
+				margin-top: 0%;
+				display: inline;
+				float: left;
+				width: 80px;
+				max-height: 72px;
+			}
+		}
+		>ul {
+			list-style-type: none;
+			padding-left: 0;
+			>li {
+				font-family: $font_family_2;
+				font-size: 14px;
+				>a{
+					text-decoration: none;
+					color: #767676;
+				}
+				>a:hover {
+					text-decoration: underline;
+				}
+			}
+			>li.list-heading {
+				color: #484848;
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
+
+.aae-section__container.notice {
+	padding: 16px;
+	background-color: $background_color_cream;
+	>div.divider {
+		background-color: #d8d8d8;
+		height: 2px;
+		margin: 96px;
+		margin-bottom: 16px;
+		margin-top: 0%;
+	}
+	>div.sub-section.notice {
+		font-family: $font_family_2;
+		font-size: 14px;
+		color: #767676;
+		text-align: center;
+		margin-bottom: 8px;
+		>div.component {
+			width: 50%;
+			text-decoration: none;
+			display:inline;
+			float:left;
+		}
+		>div.component.left {
+			padding-right: 2%;
+			text-align: right;
+		}
+		>div.component.right {
+			padding-left: 2%;
+			text-align: left;
+		}
+	}
+}
+
+
+
+@media (max-width: 1024px) {
+	.aae-section__container.footer {
+		>div.sub-section.footer {
+			>div.tech-message-wrapper {
+				>div.tech-message {
+					font-size: 1.35em;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.aae-section__container.footer {
+		>div.sub-section.footer {
+			width: 33%;
+			margin-bottom: 4%;
+		}
+		>div.sub-section.footer:last-child{
+			text-align: center;
+			width: 100%;
+			margin-bottom: 0%;
+			>div.tech-image-wrapper {
+				>img.tech-image {
+					width: 33%;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 512px) {
+	.aae-section__container.footer {
+		padding-left: 32px;
+		>div.sub-section.footer:last-child {
+			margin-top: 4%;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.aae-section__container.footer {
+		>div.sub-section.footer {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,118 @@
+@import "../../constants/constants.scss";
+
+.game_stash_card{
+  margin-top: 24px;
+  overflow: hidden;
+  >div.card {
+    display: inline;
+    float: left;
+    width: 25%;
+    height: auto;
+    border: 2px solid $background_color_cream;
+    border-radius: 16px;
+    margin-right: 2.5%;
+    padding: 0.8vw;
+    cursor:pointer;
+    text-align: center;
+    >div.title {
+      margin-left: 0.8vw;
+      font-family: $font_family_3;
+      font-weight: 600;
+      font-size: 1.9vw;
+      color: $font_color_heading;
+    }
+    >img.card_image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    >div.card_description {
+      margin-left: 0.8vw;
+      overflow: hidden;
+      font-family: $font_family_1;
+      font-weight: 400;
+      color: $font_color_description;
+      >div.number {
+        text-align: left;
+        display: inline;
+        float: left;
+        width: 50%;
+        font-size: 1.5vw;
+      }
+      >div.price {
+        background-color: #ffbb58;
+        color:white;
+        border-radius: 8px;
+        //width: 30%;
+        margin-right: 10%;
+        margin-top: 0.4vw;
+        text-align: center;
+        padding-top:0.4vw;
+        padding-bottom: 0.4vw;
+        padding-left: 0.6vw;
+        padding-right: 0.6vw;
+        display: inline;
+        float: right;
+        font-size: 1.35vw;
+      }
+    }
+  }
+  >div.card-details{
+    display: inline;
+    float: left;
+    width: 66%;
+    >div.title{
+      //border: 1px solid black;
+      display: inline;
+      float:left;
+      width: 75vw;
+      padding-left: 2.25vw;
+
+      color: $text_color_blackish;
+      font-family: $font_family_3;
+      font-size: 3.5vw;
+      font-weight: 600;
+    }
+    >div.description{
+      display: inline;
+      float:left;
+      overflow: hidden;
+      width: 100%;
+      padding-left: 2.25vw;
+      margin-bottom: 3vw;
+      margin-top: 2vw;
+
+      font-family: $font_family_1;
+			font-size: 2vw;
+			font-weight: 300;
+			color: $section_content_color_result;
+			text-align: justify;
+      >a{
+        display: inline;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        >button{
+          width: 35%;
+          margin-top: 2vw;
+          margin-right: 4vw;
+          padding-top: 0.75vw;
+          padding-bottom:0.75vw;
+          color:white;
+          background-color: $color_theme_red;
+          border: 2px solid $border_color_dark_red;
+          border-radius: 1vw;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.1);
+          display: inline;
+          float:left;
+          font-family: $font_family_2;
+          font-size: 1.35vw;
+          font-weight: 400;
+          outline:none;
+        }
+        >button:hover{
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}

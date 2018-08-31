@@ -1,0 +1,152 @@
+.battleground__container > div.body > div.battle_core {
+  margin-top: 4%;
+  overflow: hidden; }
+  .battleground__container > div.body > div.battle_core > div.battle-task {
+    display: inline;
+    float: left;
+    width: 32%;
+    overflow: hidden; }
+    .battleground__container > div.body > div.battle_core > div.battle-task > div.title, .battleground__container > div.body > div.battle_core > div.battle-task > div.task-image-container, .battleground__container > div.body > div.battle_core > div.battle-task > div.task-title, .battleground__container > div.body > div.battle_core > div.battle-task > div.task-description {
+      display: inline;
+      float: left;
+      width: 100%;
+      padding-left: 0%;
+      padding-right: 4%;
+      margin-bottom: 4%;
+      margin-top: 4%; }
+    .battleground__container > div.body > div.battle_core > div.battle-task > div.title {
+      color: #4a4a4a;
+      font-family: "Moderneratrial", sans-serif;
+      font-size: 2.75vw;
+      font-weight: 600; }
+    .battleground__container > div.body > div.battle_core > div.battle-task > div.task-image-container {
+      text-align: left;
+      padding: 0.25vw;
+      width: 100%; }
+    .battleground__container > div.body > div.battle_core > div.battle-task > div.task-title {
+      font-family: "Avenir", sans-serif;
+      font-size: 2.35vw;
+      font-weight: 400;
+      color: #4a4a4a; }
+    .battleground__container > div.body > div.battle_core > div.battle-task > div.task-description {
+      font-family: "Avenir", sans-serif;
+      font-size: 1.75vw;
+      font-weight: 400;
+      color: #7c7c7c;
+      text-align: justify; }
+  .battleground__container > div.body > div.battle_core > div.part-chooser {
+    display: inline;
+    float: left;
+    width: 68%;
+    padding-left: 4%; }
+    .battleground__container > div.body > div.battle_core > div.part-chooser > div.title {
+      display: inline;
+      float: left;
+      width: 100%;
+      padding-left: 2.5%;
+      margin-bottom: 2.5%;
+      color: #4a4a4a;
+      font-family: "Moderneratrial", sans-serif;
+      font-size: 3.5vw;
+      font-weight: 600; }
+    .battleground__container > div.body > div.battle_core > div.part-chooser > div.subtitle {
+      display: inline;
+      float: left;
+      width: 100%;
+      padding-left: 3%;
+      padding-right: 6%;
+      margin-bottom: 6%;
+      color: #82817d;
+      font-family: "Avenir", sans-serif;
+      font-size: 1.75vw;
+      font-weight: 400; }
+    .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container {
+      display: inline;
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 8%; }
+      .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container > div.cards_container-4 {
+        width: 100%;
+        display: inline;
+        float: left;
+        text-align: center;
+        overflow: hidden; }
+        .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container > div.cards_container-4 > div.card_row-4 {
+          display: inline;
+          float: left;
+          width: 100%;
+          overflow: hidden; }
+          .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container > div.cards_container-4 > div.card_row-4 > div.card-4 {
+            border-radius: 18.75%;
+            width: 25%;
+            display: inline;
+            float: left;
+            padding: 2%; }
+            .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container > div.cards_container-4 > div.card_row-4 > div.card-4 > img.image {
+              width: 80%;
+              border-radius: 18%;
+              box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.05);
+              cursor: pointer;
+              margin-bottom: 20%; }
+            .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container > div.cards_container-4 > div.card_row-4 > div.card-4 > div.title {
+              margin-top: 1%;
+              font-family: "Avenir", sans-serif;
+              font-size: 90%;
+              font-weight: 500;
+              color: #4a4a4a;
+              text-align: center; }
+            .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container > div.cards_container-4 > div.card_row-4 > div.card-4 > div.description {
+              font-family: "Avenir", sans-serif;
+              font-size: 90%;
+              font-weight: 400;
+              color: #82817d;
+              text-align: center; }
+          .battleground__container > div.body > div.battle_core > div.part-chooser > div.parts-container > div.cards_container-4 > div.card_row-4 > div.card-4.selected > img.image {
+            border: 5px solid #5ee4a9;
+            border-radius: 30%; }
+    .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container {
+      display: inline;
+      float: left;
+      width: 100%;
+      overflow: hidden; }
+      .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container > div.footer-image-container {
+        display: inline;
+        float: left;
+        width: 12%;
+        padding: 1vw; }
+        .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container > div.footer-image-container > img.footer-image {
+          display: inline;
+          float: left;
+          max-width: 100%; }
+      .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container > div.footer-image-container.left {
+        margin-left: 3%; }
+      .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container > div.footer-image-container.right {
+        float: right;
+        margin-right: 3%; }
+      .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container > div.submit-button-wrapper {
+        display: inline;
+        float: left;
+        text-align: center;
+        width: 70%;
+        padding-top: 3%;
+        padding-bottom: 4%;
+        overflow: hidden;
+        margin-bottom: 4%; }
+        .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container > div.submit-button-wrapper > button.submit-button {
+          width: 90%;
+          padding-left: 1vw;
+          padding-right: 1vw;
+          padding-top: 0.45vw;
+          padding-bottom: 0.45vw;
+          color: white;
+          background-color: #468ee5;
+          border: 2px solid #2966ae;
+          border-radius: 1vw;
+          box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.1);
+          font-family: "Avenir", sans-serif;
+          font-size: 1.75vw;
+          font-weight: 400;
+          outline: none; }
+        .battleground__container > div.body > div.battle_core > div.part-chooser > div.submit-container > div.submit-button-wrapper > button.submit-button:hover {
+          opacity: 0.75; }

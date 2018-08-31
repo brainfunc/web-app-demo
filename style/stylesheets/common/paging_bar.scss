@@ -1,0 +1,77 @@
+@import "../../constants/constants.scss";
+
+$selected_color:#ffbb58;
+$base_color: #fff;
+$hover_color: #f2f0ed;
+$border_color: #f2f0ed;
+
+.paging__container{
+  //border: 1px solid black;
+  padding: 2px;
+  padding-top: 2px;
+  display: inline;
+  float:left;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  >div.page {
+    //border:1px solid $border_color;
+    margin-right: 0.5%;
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
+    width: 4%;
+
+    display: inline;
+    float:left;
+
+    font-family: $font_family_3;
+    font-size: 1.35vw;
+    font-weight: 400;
+    color: $text_color_blackish;
+
+    background-color: $base_color;
+    border-radius: 4px;
+  }
+
+  >div.page:last-child{
+    margin-right: 0%;
+  }
+
+  >div.page:hover {
+    background-color: $hover_color;
+    cursor:pointer;
+  }
+
+  >div.selected{
+    background-color: $selected_color;
+    color: white;
+  }
+
+  >div.selected.page:hover {
+    background-color: $selected_color;
+    color: white;
+  }
+
+  >div.previous, >div.next {
+    display: inline;
+    float:left;
+
+    width: 45.75%;
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
+
+    font-family: $font_family_1;
+    font-weight: 500;
+    font-size: 2vw;
+    color: $text_color_cream;
+  }
+
+  >div.previous {
+    text-align: left;
+  }
+
+  >div.next{
+    text-align: right;
+  }
+
+}

@@ -1,0 +1,99 @@
+.game_stash_card {
+  margin-top: 24px;
+  overflow: hidden; }
+  .game_stash_card > div.card {
+    display: inline;
+    float: left;
+    width: 25%;
+    height: auto;
+    border: 2px solid #f3f1ee;
+    border-radius: 16px;
+    margin-right: 2.5%;
+    padding: 0.8vw;
+    cursor: pointer;
+    text-align: center; }
+    .game_stash_card > div.card > div.title {
+      margin-left: 0.8vw;
+      font-family: "Moderneratrial", sans-serif;
+      font-weight: 600;
+      font-size: 1.9vw;
+      color: #545454; }
+    .game_stash_card > div.card > img.card_image {
+      max-width: 100%;
+      max-height: 100%; }
+    .game_stash_card > div.card > div.card_description {
+      margin-left: 0.8vw;
+      overflow: hidden;
+      font-family: "Avenir", sans-serif;
+      font-weight: 400;
+      color: #9b9b9b; }
+      .game_stash_card > div.card > div.card_description > div.number {
+        text-align: left;
+        display: inline;
+        float: left;
+        width: 50%;
+        font-size: 1.5vw; }
+      .game_stash_card > div.card > div.card_description > div.price {
+        background-color: #ffbb58;
+        color: white;
+        border-radius: 8px;
+        margin-right: 10%;
+        margin-top: 0.4vw;
+        text-align: center;
+        padding-top: 0.4vw;
+        padding-bottom: 0.4vw;
+        padding-left: 0.6vw;
+        padding-right: 0.6vw;
+        display: inline;
+        float: right;
+        font-size: 1.35vw; }
+  .game_stash_card > div.card-details {
+    display: inline;
+    float: left;
+    width: 66%; }
+    .game_stash_card > div.card-details > div.title {
+      display: inline;
+      float: left;
+      width: 75vw;
+      padding-left: 2.25vw;
+      color: #4a4a4a;
+      font-family: "Moderneratrial", sans-serif;
+      font-size: 3.5vw;
+      font-weight: 600; }
+    .game_stash_card > div.card-details > div.description {
+      display: inline;
+      float: left;
+      overflow: hidden;
+      width: 100%;
+      padding-left: 2.25vw;
+      margin-bottom: 3vw;
+      margin-top: 2vw;
+      font-family: "Avenir", sans-serif;
+      font-size: 2vw;
+      font-weight: 300;
+      color: #7c7c7c;
+      text-align: justify; }
+      .game_stash_card > div.card-details > div.description > a {
+        display: inline;
+        float: left;
+        width: 100%;
+        overflow: hidden; }
+        .game_stash_card > div.card-details > div.description > a > button {
+          width: 35%;
+          margin-top: 2vw;
+          margin-right: 4vw;
+          padding-top: 0.75vw;
+          padding-bottom: 0.75vw;
+          color: white;
+          background-color: #ec1943;
+          border: 2px solid #bc1a39;
+          border-radius: 1vw;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.1);
+          display: inline;
+          float: left;
+          font-family: "Avenir next", sans-serif;
+          font-size: 1.35vw;
+          font-weight: 400;
+          outline: none; }
+        .game_stash_card > div.card-details > div.description > a > button:hover {
+          opacity: 0.75; }

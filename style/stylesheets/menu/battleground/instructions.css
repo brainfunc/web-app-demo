@@ -1,0 +1,70 @@
+.battleground__container > div.body > div.instructions {
+  margin-top: 6%;
+  margin-bottom: 4%; }
+  .battleground__container > div.body > div.instructions > div.instruction-item {
+    overflow: hidden;
+    padding-left: 6%;
+    margin-top: 4%; }
+    .battleground__container > div.body > div.instructions > div.instruction-item > div.instruction-bullet-image-wrapper {
+      display: inline;
+      float: left;
+      width: 8%;
+      overflow: hidden;
+      padding: 1.75%;
+      padding-top: 0%; }
+      .battleground__container > div.body > div.instructions > div.instruction-item > div.instruction-bullet-image-wrapper > img.instruction-bullet-image {
+        display: inline;
+        float: left;
+        max-width: 100%; }
+    .battleground__container > div.body > div.instructions > div.instruction-item > div.instruction-text {
+      display: inline;
+      float: left;
+      width: 80%;
+      margin-left: 2%;
+      font-family: "Avenir", sans-serif;
+      font-weight: 400;
+      font-size: 1.25em;
+      color: #82817d; }
+
+.battleground__container > div.body > div.start-footer {
+  overflow: hidden; }
+  .battleground__container > div.body > div.start-footer > div.footer-image-container {
+    display: inline;
+    float: left;
+    width: 7%;
+    padding: 1vw; }
+    .battleground__container > div.body > div.start-footer > div.footer-image-container > img.footer-image {
+      display: inline;
+      float: left;
+      max-width: 100%; }
+  .battleground__container > div.body > div.start-footer > div.footer-image-container.left {
+    margin-left: 23%; }
+  .battleground__container > div.body > div.start-footer > div.footer-image-container.right {
+    float: right;
+    margin-right: 23%; }
+  .battleground__container > div.body > div.start-footer > div.start-button-wrapper {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 40%;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+    overflow: hidden;
+    margin-bottom: 4%; }
+    .battleground__container > div.body > div.start-footer > div.start-button-wrapper > button.start-button {
+      width: 90%;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      padding-top: 0.45vw;
+      padding-bottom: 0.45vw;
+      color: white;
+      background-color: #468ee5;
+      border: 2px solid #2966ae;
+      border-radius: 1vw;
+      box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.1);
+      font-family: "Avenir", sans-serif;
+      font-size: 1.75vw;
+      font-weight: 400;
+      outline: none; }
+    .battleground__container > div.body > div.start-footer > div.start-button-wrapper > button.start-button:hover {
+      opacity: 0.75; }

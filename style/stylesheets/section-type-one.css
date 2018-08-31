@@ -1,0 +1,30 @@
+.aae-section__container.type-one {
+  border-top: 2px solid #f3f1ee;
+  background-image: url("../images/template/neural-network-light.svg");
+  background-color: #f3f1ee;
+  border-bottom: 2px solid #f3f1ee;
+  margin: 8%;
+  margin-bottom: 3%; }
+
+@media (max-width: 512px) {
+  .aae-section__container.type-one > div.wrapper {
+    display: block;
+    padding: 32px;
+    height: 100%;
+    text-align: center; }
+    .aae-section__container.type-one > div.wrapper > img.feature__image {
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 0%; } }
+
+@media (max-width: 412px) {
+  .aae-section__container.type-one > div.wrapper > div.feature__action {
+    width: 100%;
+    margin-left: 0%;
+    padding-left: 0%;
+    font-size: 2.65em; } }
+
+@media (max-width: 312px) {
+  .aae-section__container.type-one > div.wrapper > div.feature__action {
+    width: 100%;
+    font-size: 2.4em; } }

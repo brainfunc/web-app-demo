@@ -1,0 +1,105 @@
+@import "../../constants/constants.scss";
+
+$hover_color: #ffbb58;
+$selected_color:#ffbb58;
+$base_color:#555555;
+$base_color_light:#7c7c7c;
+// $border_color: #4280D1;
+
+div.sidebar-button {
+  border-radius: 0px;
+  border-left: 3px solid $base_color;
+  //border-right: 3px solid $base_color_light;
+  border-top: 0px;
+  border-bottom: 0px;
+  //color: white;
+  //background-color: #5AA9E0;
+  color: $base_color;
+  background-color: white;
+  padding: 0.75vw;
+  padding-top: 0.25vw;
+  padding-bottom: 0.25vw;
+
+  width: 12vw;
+  height: auto;
+  //text-align: center;
+
+  font-family: $font_family_1;
+  font-weight: 500;
+  font-size: 1.65vw;
+  text-align: left;
+  margin-bottom:2vw;
+  margin-top:2.5vw;
+  margin-left: 1vw;
+}
+
+div.sidebar-button:hover {
+  cursor:pointer;
+  border-color: $hover_color;
+}
+
+div.sidebar-button.selected {
+  //background-color: white;
+  color:$selected_color;
+  //border-color: $selected_color;
+  cursor: pointer;
+}
+
+div.action-button-footer{
+  //border: 1px solid black;
+  display: inline;
+  float:left;
+  width:100%;
+  padding-top: 4vw;
+  overflow: hidden;
+  >div.footer-image-container{
+    //border: 1px solid black;
+    display: inline;
+    float:left;
+    width: 7%;
+    padding: 1vw;
+    >img.footer-image{
+      display: inline;
+      float: left;
+      max-width: 100%;
+    }
+  }
+  >div.footer-image-container.left{
+    margin-left: 23%;
+  }
+  >div.footer-image-container.right{
+    float: right;
+    margin-right:23%;
+  }
+  >div.action-button-wrapper{
+    // border: 1px solid black;
+    display: inline;
+    float:left;
+    text-align: center;
+    width: 40%;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+    overflow: hidden;
+    margin-bottom: 2%;
+    >button.action-button {
+      width: 90%;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      padding-top: 0.45vw;
+      padding-bottom:0.45vw;
+      color:white;
+      background-color: #468ee5;
+      border: 2px solid #2966ae;
+      border-radius: 1vw;
+      box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.1);
+
+      font-family: $font_family_1;
+      font-size: 1.75vw;
+      font-weight: 400;
+      outline:none;
+    }
+    >button.action-button:hover{
+      opacity: 0.75;
+    }
+  }
+}

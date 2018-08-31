@@ -1,0 +1,22 @@
+@import "../constants/constants.scss";
+
+body {
+	background-color: white;
+}
+
+::placeholder {
+		color: $notice_content_color;
+		opacity: 0.35;
+}
+
+.app__container {
+	width: 100vw;
+}
+
+.aae__container {
+	width: 100%;
+	//padding-top: 10%;
+	background-color: white;
+	//background-image:
+	//url('../images/template/neural-network-light.svg');
+}

@@ -1,0 +1,21 @@
+.battleground__container {
+  padding: 4% 8% 4% 8%; }
+  .battleground__container > div.header {
+    overflow: hidden; }
+    .battleground__container > div.header > img {
+      display: inline;
+      float: left;
+      width: 20%;
+      height: 20%; }
+    .battleground__container > div.header > img.battle_icon_right {
+      float: right; }
+    .battleground__container > div.header > div.title {
+      margin-top: 6%;
+      display: inline;
+      float: left;
+      width: 60%;
+      text-align: center;
+      font-family: "Moderneratrial", sans-serif;
+      color: #4a4a4a;
+      font-weight: 600;
+      font-size: 6vw; }

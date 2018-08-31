@@ -1,0 +1,46 @@
+.paging__container {
+  padding: 2px;
+  padding-top: 2px;
+  display: inline;
+  float: left;
+  width: 100%;
+  text-align: center;
+  overflow: hidden; }
+  .paging__container > div.page {
+    margin-right: 0.5%;
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
+    width: 4%;
+    display: inline;
+    float: left;
+    font-family: "Moderneratrial", sans-serif;
+    font-size: 1.35vw;
+    font-weight: 400;
+    color: #4a4a4a;
+    background-color: #fff;
+    border-radius: 4px; }
+  .paging__container > div.page:last-child {
+    margin-right: 0%; }
+  .paging__container > div.page:hover {
+    background-color: #f2f0ed;
+    cursor: pointer; }
+  .paging__container > div.selected {
+    background-color: #ffbb58;
+    color: white; }
+  .paging__container > div.selected.page:hover {
+    background-color: #ffbb58;
+    color: white; }
+  .paging__container > div.previous, .paging__container > div.next {
+    display: inline;
+    float: left;
+    width: 45.75%;
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
+    font-family: "Avenir", sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+    color: #82817d; }
+  .paging__container > div.previous {
+    text-align: left; }
+  .paging__container > div.next {
+    text-align: right; }

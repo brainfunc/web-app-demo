@@ -1,0 +1,137 @@
+@import "../../../constants/constants.scss";
+
+.neuron_stash__container {
+  overflow: hidden;
+  >div.title{
+    //border: 1px solid black;
+    display: inline;
+    float:left;
+    width: 75vw;
+    padding-left: 2.25vw;
+
+    color: $text_color_blackish;
+    font-family: $font_family_3;
+    font-size: 3.5vw;
+    font-weight: 600;
+  }
+  >div.subtitle{
+    display: inline;
+    float:left;
+    width: 75vw;
+    padding-left: 2.25vw;
+    margin-bottom: 3vw;
+    
+    color: $text_color_cream;
+    font-family: $font_family_1;
+    font-size: 2.5vw;
+    font-weight: 400;
+  }
+  >div.cards_container-4{
+    //border: 2px solid $background_color_cream;
+    border-radius: 24px;
+    // margin: 0px;
+    //width:75vw;
+    display: inline;
+    float:left;
+    //padding: 24px;
+    >div.card_row-4 {
+      margin-bottom: 3vw;
+      overflow: hidden;
+      >div.card-4{
+        //border: 2px solid $background_color_cream;
+        border-radius: 8px;
+        width: 18vw;
+        display:inline;
+        float:left;
+        text-align: center;
+        >img.image{
+          width: 15vw;
+          height: 15vw;
+          border-radius: 2.8125vw;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.05);
+        }
+        >div.title{
+          margin-top: 1vw;
+          font-family: $font_family_1;
+          font-size: 1.5vw;
+          font-weight: 500;
+          color: $text_color_blackish;
+          text-align: left;
+          margin-left: 2vw;
+        }
+        >div.description{
+          font-family: $font_family_1;
+          font-weight: 500;
+          color:$text_color_cream;
+          overflow: hidden;
+          >div.category{
+            display: inline;
+            float: left;
+            margin-left: 2vw;
+            font-size: 1.4vw;
+            //margin-top: 0.25vw;
+          }
+          >div.quantity{
+            font-size: 1vw;
+            display: inline;
+            float: left;
+            //margin-right: 4vw;
+            margin-left: 1vw;
+            color: white;
+            background-color: #ffbb58;
+            padding: 0.25vw;
+            padding-left: 0.5vw;
+            padding-right: 0.5vw;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+// >div.cards_container{
+//   //border: 2px solid $background_color_cream;
+//   //border-radius: 8px;
+//   // margin: 0px;
+//   width:70vw;
+//   //margin-top:2vw;
+//   margin-left:16vw;
+//   padding-top: 0vw;
+//   // padding: 24px;
+//   overflow: hidden;
+//
+//
+//   >div.card_row {
+//     >div.card{
+//       border: 0px solid $background_color_cream;
+//       border-radius: 8px;
+//       width: 21vw;
+//       display:inline;
+//       float:left;
+//
+//       margin-right: 2vw;
+//       padding:1vw;
+//       >img.image{
+//         width: 19vw;
+//         height: 19vw;
+//       }
+//       >div.title{
+//         margin-top: 1vw;
+//         font-family: $font_family_1;
+//         font-size: 1.45vw;
+//         font-weight: 500;
+//         color: $text_color_blackish;
+//         text-align: center;
+//       }
+//       >div.description{
+//
+//       }
+//     }
+//     >div.card:first-child{
+//       margin-left: 1.5vw;
+//     }
+//     >div.card:last-child{
+//       margin-right: 0vw;
+//     }
+//   }
+// }

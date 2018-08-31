@@ -1,0 +1,15 @@
+.divider {
+  overflow: hidden;
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 4%;
+  padding-left: 40%; }
+  .divider > div.image-wrapper {
+    width: 10%;
+    display: inline;
+    float: left;
+    text-align: center; }
+    .divider > div.image-wrapper > img {
+      width: 2vw;
+      height: 2vw; }

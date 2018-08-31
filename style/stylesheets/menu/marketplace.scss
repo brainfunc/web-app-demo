@@ -1,0 +1,275 @@
+@import "../../constants/constants.scss";
+
+.marketplace__container {
+  padding: 4% 8% 4% 8%;
+  >div.heading {
+    font-family: $font_family_3;
+    font-weight: 600;
+    font-size: 3.5em;
+  }
+  >div.description-wrapper {
+    width: 100%;
+    overflow: hidden;
+    >div.description {
+      display: inline;
+      float: left;
+      width: 92%;
+      margin-left: 16px;
+      font-family: $font_family_1;
+      font-weight: 400;
+      font-size: 1.25em;
+      //margin:4% 8% 4% 38%;
+      padding-top:16px;
+      // padding-left: 16px;
+      text-align: justify;
+    }
+  }
+  >div.packs-wrapper {
+    margin-top: 32px;
+    overflow: hidden;
+    >div.pack {
+      display: inline;
+      float: left;
+      width: 22.5%;
+      height: auto;
+      border: 2px solid $background_color_cream;
+      border-radius: 16px;
+      margin-right: 2.5%;
+      padding: 16px;
+      cursor:pointer;
+      >div.title {
+        margin-left: 16px;
+        font-family: $font_family_3;
+        font-weight: 600;
+        font-size: 1.5em;
+        color: $font_color_heading;
+      }
+      >img.pack_image {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      >div.pack_description {
+        margin-left: 16px;
+        overflow: hidden;
+        font-family: $font_family_1;
+        font-weight: 400;
+        color: $font_color_description;
+        >div.number {
+          text-align: left;
+          display: inline;
+          float: left;
+          width: 50%;
+        }
+        >div.price {
+          background-color: $color_light_violet;
+          color:white;
+          border-radius: 8px;
+          //width: 30%;
+          margin-right: 10%;
+          text-align: center;
+          padding-top:4px;
+          padding-bottom: 4px;
+          display: inline;
+          float: right;
+          width: 40%;
+        }
+      }
+    }
+  }
+  >div.details-wrapper {
+    margin-top: 4%;
+    overflow: hidden;
+    >div.details-image-wrapper {
+      width: 50%;
+      display: inline;
+      float: left;
+      >img.details-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    >div.details-description-wrapper {
+      text-align: justify;
+      width: 46%;
+      margin-left: 4%;
+      display: inline;
+      float: left;
+      padding-top: 0px;
+      >div.title {
+        font-family: $font_family_3;
+        font-size: 3.5em;
+        font-weight: 600;
+        color: $font_color_heading;
+      }
+      >div.subtitle {
+        font-family: $font_family_1;
+        font-size: 2.4em;
+        font-weight: 400;
+        color: $font_color_description;
+      }
+      >div.description {
+        font-family: $font_family_1;
+        font-size: 1.5em;
+        font-weight: 400;
+        color: $font_color_heading;
+      }
+      >div.price-wrapper {
+        overflow: hidden;
+        font-family: $font_family_1;
+        font-weight: 400;
+        color: $font_color_heading;
+        font-size: 1.25em;
+        border-top: 2px solid $background_color_cream;
+        border-bottom: 2px solid $background_color_cream;
+
+        margin-top: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        >div.quantity {
+          width: 50%;
+          display: inline;
+          float: left;
+          overflow: hidden;
+          >button.qty, div.qty {
+            display: inline;
+            float:left;
+            text-align: center;
+          }
+          >button.qty {
+            width: 18%;
+            margin-right: 5%;
+            margin-left: 5%;
+            border-radius: 6px;
+            background-color: $color_light_gray;
+            border:2px solid $color_dark_gray;
+            color: white;
+            outline:none;
+          }
+          >button.qty:hover {
+            opacity: 0.75
+          }
+          >div.qty {
+            padding-top: 4px;
+          }
+        }
+        >div.total-price {
+          width: 50%;
+          display: inline;
+          float: left;
+          text-align: right;
+          padding-top: 8px;
+        }
+      }
+      >div.buy-wrapper {
+        margin-top: 4%;
+        width: 100%;
+        >button.buy {
+          font-family: $font_family_1;
+          font-weight: 400;
+          color: $font_color_heading;
+          font-size: 1.25em;
+          width: 100%;
+          background-color: $button_color_green;
+          border: 2px solid $border_color_dark_green;
+          border-radius: 8px;
+          color:white;
+          height: 56px;
+          outline: none;
+       }
+
+        >button.buy:disabled {
+          opacity: 0.45;
+        }
+      }
+    }
+  }
+  >div.stash-wrapper {
+    margin-top: 64px;
+    >div.title-wrapper{
+      overflow: hidden;
+      >div.lock {
+        width: 4%;
+        margin-top: 2%;
+        display: inline;
+        float:left;
+        >img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      >div.lock.left {
+        margin-left: 4%;
+        img{
+
+        }
+      }
+      >div.lock.right{
+        margin-right: 4%;
+        float: right;
+        img{
+
+        }
+      }
+      >div.title{
+        display: inline;
+        float:left;
+        width: 75%;
+        margin-left: 4%;
+        margin-bottom: 0%;
+        margin-top: 2%;
+        font-family: $font_family_3;
+        font-size: 3vw;
+        font-weight: 600;
+        color: $font_color_heading;
+        text-align: center;
+      }
+    }
+    >div.parts-wrapper{
+      //border: 2px solid $background_color_cream;
+      //border-radius: 16px;
+      margin: 2% 0% 2% 0%;
+      overflow: hidden;
+      >div.part{
+        width: 19%;
+        margin-right: 1%;
+        padding: 2%;
+        border: 2px solid $background_color_cream;
+        border-radius: 16px;
+        display: inline;
+        float: left;
+        >img.part-image{
+          max-width: 100%;
+          max-height: 100%;
+        }
+        >div.part-qty{
+          margin-left: 4%;
+          margin-right: 4%;
+          overflow: hidden;
+          font-family: $font_family_1;
+          font-size: 1.5vw;
+          font-weight: 400;
+          color: $font_color_description;
+          >div.text {
+            display: inline;
+            float:left;
+            width: 50%;
+          }
+          >div.number {
+            font-size: 1.25vw;
+            margin-top: 0.25vw;
+            display:inline;
+            float:right;
+            background-color: #f1234c;
+            opacity: 0.85;
+            color:white;
+            border-radius: 8px;
+            text-align: center;
+            width: 25%;
+          }
+        }
+      }
+    }
+  }
+}

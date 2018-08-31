@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="581px" height="597px" viewBox="0 0 581 597" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>frame</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="frame">
+            <path d="M120,12 C60.353247,12 12,60.353247 12,120 L12,440 C12,499.646753 60.353247,548 120,548 L440,548 C499.646753,548 548,499.646753 548,440 L548,120 C548,60.353247 499.646753,12 440,12 L120,12 Z M120,12 L440,12 C499.646753,12 548,60.353247 548,120 L548,440 C548,499.646753 499.646753,548 440,548 L120,548 C60.353247,548 12,499.646753 12,440 L12,120 C12,60.353247 60.353247,12 120,12 Z" id="Combined-Shape" stroke="#5EE4A9" stroke-width="24" fill="#FFFFFF"></path>
+            <rect id="Rectangle-5" fill="#5EE4A9" fill-rule="nonzero" x="385" y="401" width="196" height="196" rx="98"></rect>
+            <path d="M482.618902,523.264256 L482.650635,523.319219 L461,535.819219 L460.968267,535.764256 L460.933013,535.78461 L448.933013,515 L448.968267,514.979646 L437,494.25 L458.650635,481.75 L470.618902,502.479646 L532.071451,467 L544.071451,487.78461 L482.618902,523.264256 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero" transform="translate(490.535726, 501.409610) rotate(-15.000000) translate(-490.535726, -501.409610) "></path>
+        </g>
+    </g>
+</svg>

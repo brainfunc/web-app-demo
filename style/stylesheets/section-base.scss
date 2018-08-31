@@ -1,0 +1,112 @@
+@import "../constants/constants.scss";
+
+.aae-section__container {
+	&::after {
+		content: " ";
+		display: block;
+		height: 0;
+		clear: both;
+		width: 100%;
+	}
+	>div.wrapper {
+		display: inline;
+		float: left;
+		width: 50%;
+		padding: 24px;
+		height: 100%;
+    >img.feature__image {
+			width: 60%;
+			margin-left: 20%;
+			margin-top: 10%;
+			border: 8px solid white;
+			border-radius: 10%;
+		}
+		>img.feature__image.card.neuron {
+			width: 60%;
+			margin-left: 20%;
+			margin-top: 10%;
+			box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,.1);
+			border: 0px;
+		}
+		>div.feature__action {
+			font-family: $font_family_3;
+			font-size: 3.25em;
+			font-weight: 600;
+			color: $section_content_color_action;
+			width: 80%;
+			margin-left: 10%;
+			line-height: 1.2;
+		}
+		>div.feature__action:first-child {
+			margin-top: 10%;
+		}
+		>div.feature__result {
+			font-family: $font_family_1;
+			font-size: 1.4em;
+			font-weight: 300;
+			color: $section_content_color_result;
+			width: 80%;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-bottom: 10%;
+			margin-top: 64px;
+		}
+	}
+	&:nth-child(2n + 1) {
+		background-color: $background_color_dark;
+		>div.wrapper {
+			float: right;
+		}
+	}
+	&:nth-child(2n) {
+		background-color: $background_color_light;
+	}
+}
+
+@media (max-width: 1024px) {
+	.aae-section__container {
+		>div.wrapper {
+			>img.feature__image {
+				margin-top: 25%;
+			}
+			>img.feature__image.header {
+				margin-top: 30%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.aae-section__container {
+			>div.wrapper {
+				width: 100%;
+				text-align: center;
+				padding: 16px;
+				>img.feature__image {
+					width: 80%;
+					margin-left: 10%;
+					margin-top:35%;
+				}
+				>div.feature__result {
+					font-size: 1.5em;
+					margin-top: 64px;
+					margin-bottom: 32px;
+				}
+				>img.feature__image {
+					width: 40%;
+					margin: 0%;
+					margin-top: 10%;
+				}
+			}
+		}
+}
+
+@media (max-width: 512px) {
+	.aae-section__container {
+		>div.wrapper {
+			>div.feature__result {
+				font-size: 1.35em;
+			}
+		}
+	}
+}

@@ -1,0 +1,59 @@
+{
+  "name": "redux-simple-starter",
+  "version": "1.0.0",
+  "description": "Simple starter package for Redux with React and Babel support",
+  "main": "index.js",
+  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "engines": {
+    "npm": "5.6.0",
+    "node": "9.11.1"
+  },
+  "scripts": {
+    "dev": "npm run build-css && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "dev-watch-without-css": "nodemon --exec npm run dev",
+    "dev-watch": "npm-run-all -p watch-css dev-watch-without-css",
+    "test": "npm run build-css && mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test-watch-without-css": "nodemon --exec npm test",
+    "test-watch": "npm-run-all -p watch-css test-watch-without-css",
+    "build-css": "node-sass-chokidar style/ -o style/",
+    "watch-css": "npm run build-css && node-sass-chokidar style/ -o style/ --watch --recursive",
+    "postinstall": "npm run build-css && webpack -p",
+    "start": "node ./server.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "chai": "^3.5.0",
+    "chai-jquery": "^2.0.0",
+    "jquery": "^2.2.1",
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
+    "npm-run-all": "^4.1.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-preset-stage-1": "^6.1.18",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.3",
+    "heroku-ssl-redirect": "0.0.4",
+    "json-loader": "^0.5.7",
+    "lodash": "^3.10.1",
+    "node-sass-chokidar": "^1.3.0",
+    "path": "^0.12.7",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
+    "react-pose": "^2.2.0",
+    "react-redux": "5.0.7",
+    "react-router": "^2.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-hash-link": "^1.2.0",
+    "redux": "4.0.0",
+    "redux-thunk": "^2.3.0",
+    "web3": "^1.0.0-beta.34"
+  }
+}

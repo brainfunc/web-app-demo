@@ -1,0 +1,180 @@
+.brainpart_stash__container {
+  overflow: hidden; }
+  .brainpart_stash__container > div.brainpart_detail_container {
+    border-bottom: 2px solid #f3f1ee;
+    padding-bottom: 3vw;
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 76vw; }
+    .brainpart_stash__container > div.brainpart_detail_container > div.image_container {
+      display: inline;
+      float: left;
+      width: 26vw;
+      text-align: center; }
+      .brainpart_stash__container > div.brainpart_detail_container > div.image_container > img {
+        height: 24vw;
+        width: 24vw;
+        margin: 1vw;
+        display: inline;
+        float: left;
+        border-radius: 4.5vw;
+        box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.05); }
+      .brainpart_stash__container > div.brainpart_detail_container > div.image_container > button.boost {
+        width: 16vw;
+        margin-top: 1vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-top: 0.45vw;
+        padding-bottom: 0.45vw;
+        color: white;
+        background-color: #ffbb58;
+        border: 2px solid #d99f49;
+        border-radius: 1vw;
+        box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.075);
+        display: inline;
+        float: left;
+        font-family: "Avenir", sans-serif;
+        font-size: 1.75vw;
+        font-weight: 400;
+        outline: none; }
+      .brainpart_stash__container > div.brainpart_detail_container > div.image_container > button.boost:hover {
+        opacity: 0.75; }
+      .brainpart_stash__container > div.brainpart_detail_container > div.image_container > button.boost.locked {
+        visibility: hidden; }
+      .brainpart_stash__container > div.brainpart_detail_container > div.image_container > button.boost.unlockable {
+        visibility: visible; }
+      .brainpart_stash__container > div.brainpart_detail_container > div.image_container > button.boost.boostable {
+        visibility: hidden; }
+    .brainpart_stash__container > div.brainpart_detail_container > div.description_container {
+      display: inline;
+      float: left;
+      margin-left: 1.5vw;
+      margin-right: 1vw;
+      width: 46vw; }
+      .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.name {
+        font-family: "Moderneratrial", sans-serif;
+        font-size: 3.5vw;
+        margin-top: 1.25vw;
+        margin-left: 1vw;
+        font-weight: 600;
+        color: #4a4a4a; }
+      .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details {
+        margin-left: 1vw; }
+        .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.level {
+          overflow: hidden;
+          margin-bottom: 1.5vw; }
+          .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.level > div.increase-level-txt {
+            font-family: "Avenir", sans-serif;
+            font-size: 2.65vw;
+            font-weight: 400;
+            color: #82817d;
+            display: inline;
+            float: left; }
+          .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.level > div.locked, .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.level div.owned, .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.level div.unlockable {
+            margin-right: 4vw;
+            margin-top: 0.5vw;
+            margin-left: 2vw;
+            font-size: 1.25vw;
+            font-weight: 400;
+            border-radius: 12px;
+            background-color: #5bb75b;
+            border: 2px solid #16a05d;
+            padding: 6px;
+            padding-left: 24px;
+            padding-right: 24px;
+            color: white;
+            display: inline;
+            float: left; }
+          .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.level > div.locked {
+            background-color: #ec1943;
+            border: 2px solid #bc1a39; }
+          .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.level > div.unlockable {
+            background-color: #ffbb58;
+            border: 2px solid #d99f49; }
+        .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.text {
+          font-family: "Avenir", sans-serif;
+          font-size: 1.5vw;
+          font-weight: 400;
+          color: #82817d;
+          margin-right: 2vw; }
+        .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.neurons {
+          overflow: hidden;
+          margin-top: 2vw; }
+          .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.neurons > img {
+            width: 10%;
+            height: 10%;
+            display: inline;
+            float: left; }
+          .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.neurons > div.lbl {
+            display: inline;
+            float: left;
+            width: 85%;
+            font-weight: 500;
+            font-size: 1.7vw;
+            color: #4a4a4a;
+            margin-left: 0.75vw; }
+          .brainpart_stash__container > div.brainpart_detail_container > div.description_container > div.details > div.neurons > div.qty {
+            display: inline;
+            float: left;
+            width: 85%;
+            color: #7c7c7c;
+            font-weight: 400;
+            font-size: 1.35vw;
+            margin-left: 0.75vw; }
+  .brainpart_stash__container > div.title {
+    display: inline;
+    float: left;
+    width: 75vw;
+    padding-left: 2.25vw;
+    margin-top: 3vw;
+    color: #4a4a4a;
+    font-family: "Moderneratrial", sans-serif;
+    font-size: 3.5vw;
+    font-weight: 600; }
+  .brainpart_stash__container > div.subtitle {
+    display: inline;
+    float: left;
+    width: 75vw;
+    padding-left: 2.25vw;
+    margin-bottom: 3vw;
+    color: #82817d;
+    font-family: "Avenir", sans-serif;
+    font-size: 2.5vw;
+    font-weight: 400; }
+  .brainpart_stash__container > div.cards_container-4 {
+    border-radius: 24px;
+    width: 75vw;
+    display: inline;
+    float: left;
+    text-align: center; }
+    .brainpart_stash__container > div.cards_container-4 > div.card_row-4 {
+      display: inline;
+      float: left;
+      margin-bottom: 3vw; }
+      .brainpart_stash__container > div.cards_container-4 > div.card_row-4 > div.card-4 {
+        border-radius: 8px;
+        width: 18.5vw;
+        display: inline;
+        float: left; }
+        .brainpart_stash__container > div.cards_container-4 > div.card_row-4 > div.card-4 > img.image {
+          width: 15vw;
+          height: 15vw;
+          border-radius: 2.8125vw;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.05);
+          cursor: pointer; }
+        .brainpart_stash__container > div.cards_container-4 > div.card_row-4 > div.card-4 > div.title {
+          margin-top: 1vw;
+          font-family: "Avenir", sans-serif;
+          font-size: 1.30vw;
+          font-weight: 500;
+          color: #4a4a4a;
+          text-align: center; }
+        .brainpart_stash__container > div.cards_container-4 > div.card_row-4 > div.card-4 > div.description {
+          font-family: "Avenir", sans-serif;
+          font-size: 1.2vw;
+          font-weight: 400;
+          color: #82817d;
+          text-align: center; }

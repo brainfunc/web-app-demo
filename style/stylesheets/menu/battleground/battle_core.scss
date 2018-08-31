@@ -1,0 +1,220 @@
+@import "../../../constants/constants.scss";
+
+.battleground__container {
+  >div.body {
+    >div.battle_core{
+      margin-top: 4%;
+      // border: 1px solid black;
+      overflow: hidden;
+      >div.battle-task{
+        // border: 1px solid black;
+        display: inline;
+        float: left;
+        width: 32%;
+        overflow: hidden;
+        >div.title, >div.task-image-container, >div.task-title, >div.task-description {
+          display: inline;
+          float:left;
+          width: 100%;
+          padding-left: 0%;
+          padding-right: 4%;
+          margin-bottom: 4%;
+          margin-top: 4%;
+          // border: 1px solid black;
+        }
+        >div.title {
+          color: $text_color_blackish;
+          //opacity: 0.85;
+          font-family: $font_family_3;
+          font-size: 2.75vw;
+          font-weight: 600;
+        }
+        >div.task-image-container {
+          text-align: left;
+          padding: 0.25vw;
+          width: 100%;
+        }
+        >div.task-title {
+          font-family: $font_family_1;
+          font-size: 2.35vw;
+          font-weight: 400;
+          color: $text_color_blackish;
+        }
+        >div.task-description{
+          font-family: $font_family_1;
+          font-size: 1.75vw;
+          font-weight: 400;
+          color: $text_color_gray;
+          text-align: justify;
+        }
+      }
+      >div.part-chooser{
+        // border: 1px solid black;
+        display: inline;
+        float: left;
+        width: 68%;
+        padding-left: 4%;
+        >div.title {
+          //border: 1px solid black;
+          display: inline;
+          float:left;
+          width: 100%;
+          padding-left: 2.5%;
+          margin-bottom: 2.5%;
+          color: $text_color_blackish;
+          //opacity: 0.85;
+          font-family: $font_family_3;
+          font-size: 3.5vw;
+          font-weight: 600;
+        }
+        >div.subtitle{
+          display: inline;
+          float:left;
+          width: 100%;
+          padding-left: 3%;
+          padding-right: 6%;
+          margin-bottom: 6%;
+
+          color: $text_color_cream;
+          //opacity: 0.85;
+          font-family: $font_family_1;
+          font-size: 1.75vw;
+          font-weight: 400;
+        }
+        >div.parts-container{
+          //border: 1px solid black;
+          display: inline;
+          float: left;
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 8%;
+          >div.cards_container-4{
+            //border: 2px solid $background_color_cream;
+            //border-radius: 24px;
+            // margin: 0px;
+            width:100%;
+            // margin-top:3vw;
+            //border-top: 2px solid $background_color_cream;
+            //padding: 24px;
+            display:inline;
+            float:left;
+            text-align: center;
+            overflow: hidden;
+            >div.card_row-4 {
+              //border: 1px solid black;
+              display:inline;
+              float:left;
+              width: 100%;
+              overflow: hidden;
+              >div.card-4{
+                //border: 2px solid $background_color_cream;
+                // border: 1px solid black;
+                border-radius: 18.75%;
+                width: 25%;
+                display:inline;
+                float:left;
+                padding: 2%;
+
+                >img.image{
+                  width: 80%;
+                  border-radius: 18%;
+                  box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.05);
+                  cursor: pointer;
+                  margin-bottom: 20%;
+                }
+                >div.title{
+                  margin-top: 1%;
+                  font-family: $font_family_1;
+                  font-size: 90%;
+                  font-weight: 500;
+                  color: $text_color_blackish;
+                  text-align: center;
+                }
+                >div.description{
+                  font-family: $font_family_1;
+                  font-size: 90%;
+                  font-weight: 400;
+                  color:$text_color_cream;
+                  text-align: center;
+                }
+              }
+              >div.card-4.selected{
+                >img.image{
+                  border: 5px solid $border_color_cool_green;
+                  border-radius:30%;
+                }
+              }
+              >div.card-4.not-selected{
+
+              }
+              // >div.card-4:first-child{
+              //   margin-left:0vw;
+              // }
+              // >div.card-4:last-child{
+              //   margin-right:0vw;
+              // }
+            }
+          }
+        }
+
+        >div.submit-container{
+          display: inline;
+          float: left;
+          width: 100%;
+          // border: 1px solid black;
+          overflow: hidden;
+          >div.footer-image-container{
+            // border: 1px solid black;
+            display: inline;
+            float:left;
+            width: 12%;
+            padding: 1vw;
+            >img.footer-image{
+              display: inline;
+              float: left;
+              max-width: 100%;
+            }
+          }
+          >div.footer-image-container.left{
+            margin-left: 3%;
+          }
+          >div.footer-image-container.right{
+            float: right;
+            margin-right:3%;
+          }
+          >div.submit-button-wrapper{
+            //border: 1px solid black;
+            display: inline;
+            float:left;
+            text-align: center;
+            width: 70%;
+            padding-top: 3%;
+            padding-bottom: 4%;
+            overflow: hidden;
+            margin-bottom: 4%;
+            >button.submit-button {
+              width: 90%;
+              padding-left: 1vw;
+              padding-right: 1vw;
+              padding-top: 0.45vw;
+              padding-bottom:0.45vw;
+              color:white;
+              background-color: #468ee5;
+              border: 2px solid #2966ae;
+              border-radius: 1vw;
+              box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.1);
+
+              font-family: $font_family_1;
+              font-size: 1.75vw;
+              font-weight: 400;
+              outline:none;
+            }
+            >button.submit-button:hover{
+              opacity: 0.75;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../constants/constants.scss";
+
+.battleground__container {
+  padding: 4% 8% 4% 8%;
+  >div.header{
+    //border: 1px solid black;
+    overflow: hidden;
+    >img{
+      //border: 1px solid black;
+      display: inline;
+      float: left;
+      width: 20%;
+      height: 20%;
+    }
+    >img.battle_icon_left{
+
+    }
+    >img.battle_icon_right{
+      float: right;
+    }
+    >div.title{
+      //border: 1px solid black;
+      margin-top: 6%;
+      display: inline;
+      float: left;
+      width: 60%;
+      text-align: center;
+      font-family: $font_family_3;
+      color: $text_color_blackish;
+      font-weight: 600;
+      font-size: 6vw;
+    }
+  }
+}

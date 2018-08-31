@@ -1,0 +1,220 @@
+@import "../../../constants/constants.scss";
+
+.exchange__container {
+  overflow: hidden;
+  >div.title{
+    //border: 1px solid black;
+    display: inline;
+    float:left;
+    width: 75vw;
+    padding-left: 2.25vw;
+
+    color: $text_color_blackish;
+    font-family: $font_family_3;
+    font-size: 4.5vw;
+    font-weight: 600;
+  }
+  >div.description{
+    //border: 1px solid black;
+    display: inline;
+    float:left;
+    width: 100%;
+    padding-left: 2.25vw;
+    padding-right: 4vw;
+    margin-top: 1vw;
+
+    text-align: justify;
+    color: $text_color_cream;
+    font-family: $font_family_1;
+    font-size: 2vw;
+    font-weight: 400;
+  }
+
+  div.item_exchanger__container {
+    margin-top: 2vw;
+    // border: 1px solid black;
+    display: inline;
+    float:left;
+    width: 100%;
+    padding: 2%;
+
+    >div.brainfunc_items_container,
+    >div.exchange_buttons_container,
+    >div.alto_items_container {
+      //border: 1px solid black;
+      width: 100%;
+      padding: 1vw;
+      overflow: hidden;
+      >div.brainfunc_item_container ,
+      >div.button_container,
+      >div.alto_item_container {
+        width: 20%;
+        padding: 1%;
+        display:inline;
+        float:left;
+        text-align: center;
+      }
+    }
+
+    >div.brainfunc_items_container, >div.alto_items_container {
+      >div.brainfunc_item_container, >div.alto_item_container {
+        overflow: hidden;
+        >div.heading, >div.caption, >div.image-container {
+          display: inline;
+          float:left;
+          width: 100%;
+        }
+        >div.heading{
+          font-family: $font_family_1;
+          font-size: 100%;
+          color: $text_color_blackish;
+          font-weight: 600;
+          text-align: left;
+        }
+        >div.status{
+          font-family: $font_family_1;
+          font-size: 1.3vw;
+          color: $text_color_blackish;
+          font-weight: 600;
+          width: 100%;
+          margin-left: 4%;
+          >img.lock-image {
+            display: inline;
+            float: left;
+            width: 20%;
+          }
+          >div.lock-text {
+            display: inline;
+            float: left;
+            width: 70%;
+            margin-left: 6%;
+            margin-top: 2%;
+            text-align: left;
+          }
+        }
+        >div.image-container{
+          padding: 4%;
+          >img.image{
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 18.75%;
+            box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.05);
+          }
+        }
+        >div.caption{
+          display: inline;
+          float: left;
+          width: 100%;
+          padding-left: 12%;
+          text-align: left;
+          >div.description{
+            font-family: $font_family_1;
+            font-size: 1.3vw;
+            color: $text_color_blackish;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    >div.alto_items_container {
+      >div.alto_item_container{
+        >div.status{
+          >div.lock-text{
+            width:80%;
+            background-color: $button_color_gray;
+            color: white;
+            font-weight: 500;
+            border-radius: 1vw;
+            padding: 0.25vw;
+            text-align:center;
+            margin-bottom: 0.75vw;
+            border: 2px solid $border_color_dark_gray;
+          }
+          >div.lock-text.owned{
+            background-color: $button_color_yellow;
+            border: 2px solid $border_color_dark_yellow;
+          }
+        }
+        >div.caption{
+          width:85%;
+
+        }
+      }
+    }
+
+    >div.brainfunc_items_container {
+      >div.brainfunc_item_container{
+        >div.status{
+          text-align: center;
+          >img{
+            margin-top: 0.35vw;
+            border-radius: 0.5vw;
+          }
+          >img.lock-image.locked{
+            width: 0%;
+          }
+          >img.lock-image.unlocked{
+            width: 0%;
+          }
+          >div.lock-text {
+            width:80%;
+            margin-left: 10%;
+            background-color: $text_color_blackish;
+            color: white;
+            font-weight: 500;
+            font-size: 1.35vw;
+            border-radius: 1vw;
+            padding: 0.25vw;
+            text-align:center;
+            margin-bottom: 1vw;
+          }
+          >div.lock-text.locked{
+            background-color: white;
+            color: $text_color_blackish;
+            border: 2px solid $border_color_dark_gray;
+          }
+          >div.lock-text.unlocked{
+            background-color: $button_color_green;
+            border: 2px solid $border_color_dark_green;
+          }
+        }
+        >div.caption{
+          width:85%;
+
+        }
+      }
+    }
+
+    >div.exchange_buttons_container {
+      >div.button_container{
+        //border: 1px solid black;
+        text-align: center;
+        >div.exchange_button_wrapper{
+          //border: 1px solid black;
+          width: 4vw;
+          height: 4vw;
+          margin-left: 35%;
+          border-radius: 2vw;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.1);
+          >img.exchange_button{
+            height: 100%;
+            width: 100%;
+          }
+        }
+        >div.exchange_button_wrapper:hover{
+          cursor: pointer;
+          opacity: 0.75;
+        }
+      }
+    }
+
+  }
+}
+
+div.game_stash__container {
+  // border: 1px solid black;
+  display: inline;
+  float:left;
+  width: 100%;
+}

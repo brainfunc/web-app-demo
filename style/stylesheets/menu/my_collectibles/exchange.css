@@ -1,0 +1,160 @@
+.exchange__container {
+  overflow: hidden; }
+  .exchange__container > div.title {
+    display: inline;
+    float: left;
+    width: 75vw;
+    padding-left: 2.25vw;
+    color: #4a4a4a;
+    font-family: "Moderneratrial", sans-serif;
+    font-size: 4.5vw;
+    font-weight: 600; }
+  .exchange__container > div.description {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-left: 2.25vw;
+    padding-right: 4vw;
+    margin-top: 1vw;
+    text-align: justify;
+    color: #82817d;
+    font-family: "Avenir", sans-serif;
+    font-size: 2vw;
+    font-weight: 400; }
+  .exchange__container div.item_exchanger__container {
+    margin-top: 2vw;
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 2%; }
+    .exchange__container div.item_exchanger__container > div.brainfunc_items_container,
+    .exchange__container div.item_exchanger__container > div.exchange_buttons_container,
+    .exchange__container div.item_exchanger__container > div.alto_items_container {
+      width: 100%;
+      padding: 1vw;
+      overflow: hidden; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container,
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.button_container,
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container,
+      .exchange__container div.item_exchanger__container > div.exchange_buttons_container > div.brainfunc_item_container,
+      .exchange__container div.item_exchanger__container > div.exchange_buttons_container > div.button_container,
+      .exchange__container div.item_exchanger__container > div.exchange_buttons_container > div.alto_item_container,
+      .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container,
+      .exchange__container div.item_exchanger__container > div.alto_items_container > div.button_container,
+      .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container {
+        width: 20%;
+        padding: 1%;
+        display: inline;
+        float: left;
+        text-align: center; }
+    .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container {
+      overflow: hidden; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.heading, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.caption, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.image-container, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.heading, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.caption, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.image-container, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.heading, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.caption, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.image-container, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.heading, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.caption, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.image-container {
+        display: inline;
+        float: left;
+        width: 100%; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.heading, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.heading, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.heading, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.heading {
+        font-family: "Avenir", sans-serif;
+        font-size: 100%;
+        color: #4a4a4a;
+        font-weight: 600;
+        text-align: left; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.status, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.status, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.status {
+        font-family: "Avenir", sans-serif;
+        font-size: 1.3vw;
+        color: #4a4a4a;
+        font-weight: 600;
+        width: 100%;
+        margin-left: 4%; }
+        .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > img.lock-image, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.status > img.lock-image, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.status > img.lock-image, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.status > img.lock-image {
+          display: inline;
+          float: left;
+          width: 20%; }
+        .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > div.lock-text, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.status > div.lock-text, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.status > div.lock-text, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.status > div.lock-text {
+          display: inline;
+          float: left;
+          width: 70%;
+          margin-left: 6%;
+          margin-top: 2%;
+          text-align: left; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.image-container, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.image-container, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.image-container, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.image-container {
+        padding: 4%; }
+        .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.image-container > img.image, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.image-container > img.image, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.image-container > img.image, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.image-container > img.image {
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 18.75%;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.05); }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.caption, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.caption, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.caption, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.caption {
+        display: inline;
+        float: left;
+        width: 100%;
+        padding-left: 12%;
+        text-align: left; }
+        .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.caption > div.description, .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.alto_item_container > div.caption > div.description, .exchange__container div.item_exchanger__container > div.alto_items_container > div.brainfunc_item_container > div.caption > div.description, .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.caption > div.description {
+          font-family: "Avenir", sans-serif;
+          font-size: 1.3vw;
+          color: #4a4a4a;
+          font-weight: 600; }
+    .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.status > div.lock-text {
+      width: 80%;
+      background-color: #7c7c7c;
+      color: white;
+      font-weight: 500;
+      border-radius: 1vw;
+      padding: 0.25vw;
+      text-align: center;
+      margin-bottom: 0.75vw;
+      border: 2px solid #4a4a4a; }
+    .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.status > div.lock-text.owned {
+      background-color: #ffbb58;
+      border: 2px solid #d99f49; }
+    .exchange__container div.item_exchanger__container > div.alto_items_container > div.alto_item_container > div.caption {
+      width: 85%; }
+    .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status {
+      text-align: center; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > img {
+        margin-top: 0.35vw;
+        border-radius: 0.5vw; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > img.lock-image.locked {
+        width: 0%; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > img.lock-image.unlocked {
+        width: 0%; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > div.lock-text {
+        width: 80%;
+        margin-left: 10%;
+        background-color: #4a4a4a;
+        color: white;
+        font-weight: 500;
+        font-size: 1.35vw;
+        border-radius: 1vw;
+        padding: 0.25vw;
+        text-align: center;
+        margin-bottom: 1vw; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > div.lock-text.locked {
+        background-color: white;
+        color: #4a4a4a;
+        border: 2px solid #4a4a4a; }
+      .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.status > div.lock-text.unlocked {
+        background-color: #5bb75b;
+        border: 2px solid #16a05d; }
+    .exchange__container div.item_exchanger__container > div.brainfunc_items_container > div.brainfunc_item_container > div.caption {
+      width: 85%; }
+    .exchange__container div.item_exchanger__container > div.exchange_buttons_container > div.button_container {
+      text-align: center; }
+      .exchange__container div.item_exchanger__container > div.exchange_buttons_container > div.button_container > div.exchange_button_wrapper {
+        width: 4vw;
+        height: 4vw;
+        margin-left: 35%;
+        border-radius: 2vw;
+        box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.1); }
+        .exchange__container div.item_exchanger__container > div.exchange_buttons_container > div.button_container > div.exchange_button_wrapper > img.exchange_button {
+          height: 100%;
+          width: 100%; }
+      .exchange__container div.item_exchanger__container > div.exchange_buttons_container > div.button_container > div.exchange_button_wrapper:hover {
+        cursor: pointer;
+        opacity: 0.75; }
+
+div.game_stash__container {
+  display: inline;
+  float: left;
+  width: 100%; }

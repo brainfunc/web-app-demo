@@ -1,0 +1,103 @@
+.my_collectibles__container > div.profile_container {
+  border-bottom: 2px solid #f3f1ee;
+  margin: 32px;
+  margin-top: 0px;
+  padding: 32px;
+  overflow: hidden; }
+  .my_collectibles__container > div.profile_container > div.image_container {
+    display: inline;
+    float: left;
+    margin-left: 4vw; }
+    .my_collectibles__container > div.profile_container > div.image_container > img {
+      height: 12.5vw;
+      width: 12.5vw;
+      border-radius: 2.34375vw;
+      box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.075);
+      overflow: hidden; }
+  .my_collectibles__container > div.profile_container > div.wallet_container {
+    display: inline;
+    float: left;
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
+    font-size: 1.75vw;
+    margin-left: 4vw;
+    width: 34vw; }
+    .my_collectibles__container > div.profile_container > div.wallet_container > div.title {
+      margin-top: 1.5vw;
+      font-weight: 600;
+      color: #4a4a4a; }
+    .my_collectibles__container > div.profile_container > div.wallet_container > div.wallet_address {
+      font-weight: 400;
+      font-size: 1.4vw;
+      color: #82817d; }
+    .my_collectibles__container > div.profile_container > div.wallet_container > div.neurons, .my_collectibles__container > div.profile_container > div.wallet_container > div.brainparts {
+      display: inline;
+      overflow: hidden;
+      width: 15vw;
+      margin-top: 1vw; }
+      .my_collectibles__container > div.profile_container > div.wallet_container > div.neurons > img, .my_collectibles__container > div.profile_container > div.wallet_container > div.brainparts > img {
+        width: 4vw;
+        height: 4vw;
+        display: inline;
+        float: left; }
+      .my_collectibles__container > div.profile_container > div.wallet_container > div.neurons div.lbl, .my_collectibles__container > div.profile_container > div.wallet_container > div.brainparts div.lbl {
+        display: inline;
+        float: left;
+        width: 10vw;
+        font-weight: 600;
+        font-size: 1.4vw;
+        color: #4a4a4a;
+        margin-left: 0.75vw; }
+      .my_collectibles__container > div.profile_container > div.wallet_container > div.neurons div.qty, .my_collectibles__container > div.profile_container > div.wallet_container > div.brainparts div.qty {
+        display: inline;
+        float: left;
+        width: 10vw;
+        color: #82817d;
+        font-weight: 400;
+        font-size: 1.4vw;
+        margin-top: -0.2vw;
+        margin-left: 0.75vw; }
+    .my_collectibles__container > div.profile_container > div.wallet_container > div.neurons {
+      float: left;
+      text-align: left; }
+    .my_collectibles__container > div.profile_container > div.wallet_container > div.brainparts {
+      float: right;
+      margin-right: 4vw; }
+  .my_collectibles__container > div.profile_container > div.action_container {
+    display: inline;
+    float: right;
+    width: 28vw;
+    padding: 1.5vw;
+    margin-top: 2vw;
+    text-align: right; }
+    .my_collectibles__container > div.profile_container > div.action_container > button.action_button {
+      background-color: #1fbb21;
+      border: 3px solid #029900;
+      box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.075);
+      outline: none;
+      border-radius: 12px;
+      padding: 1.5vw;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      margin-right: 1vw;
+      font-size: 2vw;
+      font-family: "Avenir", sans-serif;
+      color: white; }
+    .my_collectibles__container > div.profile_container > div.action_container > button.action_button:hover {
+      opacity: 0.75; }
+
+.my_collectibles__container > div.stash_container {
+  border-radius: 24px;
+  margin: 32px;
+  padding: 24px;
+  overflow: hidden;
+  overflow: hidden; }
+  .my_collectibles__container > div.stash_container > div.sidebar {
+    width: 15vw;
+    display: inline;
+    float: left; }
+    .my_collectibles__container > div.stash_container > div.sidebar > div.brainparts_button, .my_collectibles__container > div.stash_container > div.sidebar > div.exchange_button {
+      margin-top: 0.75vw; }
+  .my_collectibles__container > div.stash_container > div.detail-section {
+    width: 75vw;
+    display: inline; }

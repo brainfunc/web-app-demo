@@ -1,0 +1,52 @@
+@import "../constants/constants.scss";
+.aae-section__container.type-one {
+	border-top: 2px solid $background_color_cream;
+	background-image: url('../images/template/neural-network-light.svg');
+	background-color: $background_color_cream;
+	border-bottom: 2px solid $background_color_cream;
+	margin: 8%;
+	//margin-top: 6%;
+	margin-bottom: 3%;
+	//box-shadow: 0em 0.5em 1.5em 0 rgba(0,0,0,0.1);
+}
+
+@media (max-width: 512px) {
+	.aae-section__container.type-one {
+		>div.wrapper {
+			display: block;
+			padding: 32px;
+			height: 100%;
+			text-align: center;
+			>img.feature__image {
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 0%;
+			}
+		}
+	}
+}
+
+@media (max-width: 412px) {
+	.aae-section__container.type-one {
+		>div.wrapper {
+			>div.feature__action {
+				width:100%;
+				margin-left:0%;
+				padding-left:0%;
+				font-size: 2.65em;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 312px) {
+	.aae-section__container.type-one {
+		>div.wrapper {
+			>div.feature__action {
+				width:100%;
+				font-size: 2.4em;
+			}
+		}
+	}
+}

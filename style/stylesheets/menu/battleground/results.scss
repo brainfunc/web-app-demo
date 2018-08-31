@@ -1,0 +1,187 @@
+@import "../../../constants/constants.scss";
+
+.battleground__container {
+  >div.body {
+    >div.results{
+      // border: 1px solid black;
+      overflow: hidden;
+      >div.heading, >div.description-wrapper,
+      >div.subheading, >div.partwise-results-container,
+      >div.button-wrapper {
+        // border: 1px solid black;
+        display: inline;
+        float:left;
+        width: 100%;
+      }
+
+      >div.heading{
+        font-family: $font_family_3;
+        font-weight: 600;
+        font-size: 4.5vw;
+        color: $text_color_blackish;
+      }
+
+      >div.description-wrapper{
+        margin-left: 2%;
+        width: 48%;
+
+        >div.description{
+          color: $text_color_gray;
+          font-family: $font_family_1;
+          font-size: 2vw;
+          font-weight: 400;
+        }
+      }
+
+
+      >div.button-wrapper{
+        margin-right: 2%;
+        width: 48%;
+        text-align: right;
+        >button.take-again{
+          //background-color: #00af01;
+          background-color: $button_color_blue;
+          //border: 2px solid #027101;
+          border: 3px solid $border_color_dark_blue;
+          box-shadow: 4px 8px 16px rgba(0,0,0,0.075);
+          outline:none;
+
+          border-radius: 12px;
+          padding: 1.5vw;
+          padding-left: 3vw;
+          padding-right: 3vw;
+          margin-right: 4.5vw;
+
+          font-size: 2vw;
+          font-family: $font_family_1;
+          color:white;
+        }
+        >button.take-again:hover{
+          opacity: 0.75;
+        }
+
+      }
+
+      >div.subheading{
+        margin-top: 2.5vw;
+        color: $text_color_blackish;
+        font-family: $font_family_3;
+        font-size: 4.5vw;
+        font-weight: 600;
+      }
+
+      >div.partwise-results-container{
+        margin-top: 3%;
+
+        >div.part-result-card{
+          overflow: hidden;
+          margin-bottom: 3%;
+          div{
+            display: inline;
+            float:left;
+            //border:1px solid black;
+          }
+
+          >div.brainpart-image-container{
+            width: 14%;
+            margin-left: 2%;
+
+            >img.brainpart{
+              width: 100%;
+              box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.1);
+              border-radius: 18.75%;
+            }
+            >img.result{
+              width: 30%;
+              margin-left: 80%;
+              margin-top: -30%;
+            }
+          }
+          >div.result-description-container{
+            width: 57%;
+            text-align: justify;
+            margin-left: 5%;
+            >div{
+              width: 100%;
+            }
+            >div.title {
+              color: $text_color_blackish;
+              font-family: $font_family_1;
+              font-size: 2.25vw;
+              font-weight: 600;
+            }
+            >div.subtitle{
+              color: $text_color_cream;
+              font-family: $font_family_1;
+              font-size: 1.75vw;
+              font-weight: 500;
+            }
+            >div.text{
+              color: $text_color_cream;
+              font-family: $font_family_1;
+              font-size: 1.45vw;
+              font-weight: 400;
+            }
+          }
+          >div.level-up-details-container{
+            margin-left: 3%;
+            width: 16%;
+            padding: 2% 2% 2% 2%;
+            text-align: center;
+            >img.stars{
+              width: 100%;
+
+            }
+            >div.progress-container{
+
+              width:100%;
+              text-align: center;
+              div{
+                height: 1.75vw;
+                width:100%;
+                border-radius: 1vw;
+              }
+              >div.progress-base.decrease{
+                width:100%;
+
+                margin-top: 2vw;
+                background-color: $progress_color_decrease_base;
+                >div.progress-previous{
+                  width:80%;
+
+                  background-color: $progress_color_decrease_previous;
+
+                  >div.progress-current{
+                    width:50%;
+
+                    background-color: $progress_color_decrease_current;
+
+                  }
+                }
+              }
+              >div.progress-base.increase{
+                width:100%;
+
+                margin-top: 2vw;
+                background-color: $progress_color_increase_base;
+                >div.progress-previous{
+                  width:80%;
+
+                  background-color: $progress_color_increase_previous;
+
+                  >div.progress-current{
+                    width:100%;
+
+                    background-color: $progress_color_increase_current;
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

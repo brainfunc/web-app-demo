@@ -1,0 +1,23 @@
+@import "../../constants/constants.scss";
+
+.divider{
+  //border: 1px solid black;
+  overflow: hidden;
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 4%;
+  padding-left: 40%;
+  >div.image-wrapper{
+    //border: 1px solid black;
+    width:10%;
+    display: inline;
+    float: left;
+    text-align: center;
+    >img{
+      width: 2vw;
+      height: 2vw;
+
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.battleground__container > div.body > div.results {
+  overflow: hidden; }
+  .battleground__container > div.body > div.results > div.heading, .battleground__container > div.body > div.results > div.description-wrapper,
+  .battleground__container > div.body > div.results > div.subheading, .battleground__container > div.body > div.results > div.partwise-results-container,
+  .battleground__container > div.body > div.results > div.button-wrapper {
+    display: inline;
+    float: left;
+    width: 100%; }
+  .battleground__container > div.body > div.results > div.heading {
+    font-family: "Moderneratrial", sans-serif;
+    font-weight: 600;
+    font-size: 4.5vw;
+    color: #4a4a4a; }
+  .battleground__container > div.body > div.results > div.description-wrapper {
+    margin-left: 2%;
+    width: 48%; }
+    .battleground__container > div.body > div.results > div.description-wrapper > div.description {
+      color: #7c7c7c;
+      font-family: "Avenir", sans-serif;
+      font-size: 2vw;
+      font-weight: 400; }
+  .battleground__container > div.body > div.results > div.button-wrapper {
+    margin-right: 2%;
+    width: 48%;
+    text-align: right; }
+    .battleground__container > div.body > div.results > div.button-wrapper > button.take-again {
+      background-color: #468ee5;
+      border: 3px solid #2966ae;
+      box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.075);
+      outline: none;
+      border-radius: 12px;
+      padding: 1.5vw;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      margin-right: 4.5vw;
+      font-size: 2vw;
+      font-family: "Avenir", sans-serif;
+      color: white; }
+    .battleground__container > div.body > div.results > div.button-wrapper > button.take-again:hover {
+      opacity: 0.75; }
+  .battleground__container > div.body > div.results > div.subheading {
+    margin-top: 2.5vw;
+    color: #4a4a4a;
+    font-family: "Moderneratrial", sans-serif;
+    font-size: 4.5vw;
+    font-weight: 600; }
+  .battleground__container > div.body > div.results > div.partwise-results-container {
+    margin-top: 3%; }
+    .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card {
+      overflow: hidden;
+      margin-bottom: 3%; }
+      .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card div {
+        display: inline;
+        float: left; }
+      .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.brainpart-image-container {
+        width: 14%;
+        margin-left: 2%; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.brainpart-image-container > img.brainpart {
+          width: 100%;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.1);
+          border-radius: 18.75%; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.brainpart-image-container > img.result {
+          width: 30%;
+          margin-left: 80%;
+          margin-top: -30%; }
+      .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.result-description-container {
+        width: 57%;
+        text-align: justify;
+        margin-left: 5%; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.result-description-container > div {
+          width: 100%; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.result-description-container > div.title {
+          color: #4a4a4a;
+          font-family: "Avenir", sans-serif;
+          font-size: 2.25vw;
+          font-weight: 600; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.result-description-container > div.subtitle {
+          color: #82817d;
+          font-family: "Avenir", sans-serif;
+          font-size: 1.75vw;
+          font-weight: 500; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.result-description-container > div.text {
+          color: #82817d;
+          font-family: "Avenir", sans-serif;
+          font-size: 1.45vw;
+          font-weight: 400; }
+      .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container {
+        margin-left: 3%;
+        width: 16%;
+        padding: 2% 2% 2% 2%;
+        text-align: center; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > img.stars {
+          width: 100%; }
+        .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container {
+          width: 100%;
+          text-align: center; }
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container div {
+            height: 1.75vw;
+            width: 100%;
+            border-radius: 1vw; }
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.decrease {
+            width: 100%;
+            margin-top: 2vw;
+            background-color: #F8BEA0; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.decrease > div.progress-previous {
+              width: 80%;
+              background-color: #f47b79; }
+              .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.decrease > div.progress-previous > div.progress-current {
+                width: 50%;
+                background-color: #ec1943; }
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.increase {
+            width: 100%;
+            margin-top: 2vw;
+            background-color: #B8F8A0; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.increase > div.progress-previous {
+              width: 80%;
+              background-color: #98d481; }
+              .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.increase > div.progress-previous > div.progress-current {
+                width: 100%;
+                background-color: #6E9F5C; }

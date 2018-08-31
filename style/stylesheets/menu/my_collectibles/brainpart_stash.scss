@@ -1,0 +1,245 @@
+@import "../../../constants/constants.scss";
+
+.brainpart_stash__container {
+  overflow: hidden;
+  >div.brainpart_detail_container {
+    border-bottom: 2px solid $background_color_cream;
+    padding-bottom: 3vw;
+    //border-radius: 24px;
+    //margin: 32px;
+    //padding: 32px;
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 76vw;
+    >div.image_container{
+      display: inline;
+      float: left;
+      width: 26vw;
+      text-align: center;
+      >img{
+        height: 24vw;
+        width: 24vw;
+        margin: 1vw;
+        display: inline;
+        float:left;
+        border-radius: 4.5vw;
+        box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.05);
+      }
+      >button.boost {
+        width: 16vw;
+        margin-top: 1vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-top: 0.45vw;
+        padding-bottom:0.45vw;
+        color:white;
+        background-color: $button_color_yellow;
+        border: 2px solid $border_color_dark_yellow;
+        border-radius: 1vw;
+        box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.075);
+        display: inline;
+        float:left;
+        font-family: $font_family_1;
+        font-size: 1.75vw;
+        font-weight: 400;
+        outline:none;
+      }
+      >button.boost:hover{
+        opacity: 0.75;
+      }
+
+      >button.boost.locked{
+        // TODO- Unhide later
+        visibility: hidden;
+      }
+      >button.boost.unlockable{
+        visibility: visible;
+      }
+      >button.boost.boostable{
+        // TODO- Unhide later
+        visibility: hidden;
+      }
+
+    }
+    >div.description_container {
+      display: inline;
+      float:left;
+      margin-left: 1.5vw;
+      margin-right: 1vw;
+      width: 46vw;
+      >div.name{
+        font-family: $font_family_3;
+        font-size: 3.5vw;
+        margin-top: 1.25vw;
+        margin-left: 1vw;
+        font-weight: 600;
+        color:#4a4a4a;
+      }
+      >div.details {
+        margin-left: 1vw;
+        >div.level{
+          overflow: hidden;
+          margin-bottom: 1.5vw;
+          >div.increase-level-txt{
+            font-family: $font_family_1;
+            font-size: 2.65vw;
+            font-weight: 400;
+            color:$text_color_cream;
+            display: inline;
+            float:left;
+          }
+          >div.locked, div.owned, div.unlockable{
+            margin-right: 4vw;
+            margin-top: 0.5vw;
+            margin-left: 2vw;
+            font-size: 1.25vw;
+            font-weight: 400;
+            border-radius: 12px;
+            background-color: $button_color_green;
+            border:2px solid $border_color_dark_green;
+            padding: 6px;
+            padding-left:24px;
+            padding-right:24px;
+            color:white;
+            display:inline;
+            float:left;
+          }
+          >div.locked{
+            background-color: $button_color_red;
+            border: 2px solid $border_color_dark_red;
+          }
+          >div.unlockable{
+            background-color: $button_color_yellow;
+            border: 2px solid $border_color_dark_yellow;
+          }
+        }
+        >div.text{
+          font-family: $font_family_1;
+          font-size: 1.5vw;
+          font-weight: 400;
+          color:$text_color_cream;
+          margin-right: 2vw;
+        }
+        >div.neurons{
+          //border: 1px solid black;
+          overflow: hidden;
+          margin-top: 2vw;
+          >img{
+            width: 10%;
+            height: 10%;
+            display: inline;
+            float: left;
+          }
+          >div.lbl{
+            display: inline;
+            float: left;
+            width: 85%;
+
+            // border: 1px solid black;
+            font-weight: 500;
+            font-size: 1.7vw;
+            color: $text_color_blackish;
+
+            margin-left: 0.75vw;
+          }
+          >div.qty{
+            display: inline;
+            float: left;
+            width: 85%;
+
+            color: $text_color_gray;
+            // border:1px solid black;
+
+            font-weight: 400;
+            font-size: 1.35vw;
+
+            margin-left: 0.75vw;
+          }
+        }
+      }
+
+    }
+  }
+
+  >div.title{
+    //border: 1px solid black;
+    display: inline;
+    float:left;
+    width: 75vw;
+    padding-left: 2.25vw;
+    margin-top: 3vw;
+
+    color: $text_color_blackish;
+    font-family: $font_family_3;
+    font-size: 3.5vw;
+    font-weight: 600;
+  }
+  >div.subtitle{
+    display: inline;
+    float:left;
+    width: 75vw;
+    padding-left: 2.25vw;
+    margin-bottom: 3vw;
+
+    color: $text_color_cream;
+    font-family: $font_family_1;
+    font-size: 2.5vw;
+    font-weight: 400;
+  }
+  >div.cards_container-4{
+    //border: 2px solid $background_color_cream;
+    border-radius: 24px;
+    // margin: 0px;
+    width:75vw;
+    // margin-top:3vw;
+    //border-top: 2px solid $background_color_cream;
+    //padding: 24px;
+    display:inline;
+    float:left;
+    text-align: center;
+    >div.card_row-4 {
+      display:inline;
+      float:left;
+      margin-bottom: 3vw;
+      >div.card-4{
+        //border: 2px solid $background_color_cream;
+        border-radius: 8px;
+        width: 18.5vw;
+        display:inline;
+        float:left;
+
+        >img.image{
+          width: 15vw;
+          height: 15vw;
+          border-radius: 2.8125vw;
+          box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.05);
+          cursor: pointer;
+        }
+        >div.title{
+          margin-top: 1vw;
+          font-family: $font_family_1;
+          font-size: 1.30vw;
+          font-weight: 500;
+          color: $text_color_blackish;
+          text-align: center;
+        }
+        >div.description{
+          font-family: $font_family_1;
+          font-size: 1.2vw;
+          font-weight: 400;
+          color:$text_color_cream;
+          text-align: center;
+        }
+      }
+      // >div.card-4:first-child{
+      //   margin-left:0vw;
+      // }
+      // >div.card-4:last-child{
+      //   margin-right:0vw;
+      // }
+    }
+  }
+}

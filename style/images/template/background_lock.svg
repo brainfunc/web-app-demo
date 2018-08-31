@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="495px" height="517px" viewBox="0 0 495 517" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>lock</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-11.1%" y="-8.8%" width="126.0%" height="124.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="8" dy="16" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lock" filter="url(#filter-1)" transform="translate(24.000000, 15.000000)" fill-rule="nonzero">
+            <path d="M423,220 L431,220 L431,454 L423,454 L8,454 C3.581722,454 5.41083001e-16,450.418278 0,446 L0,228 C-5.41083001e-16,223.581722 3.581722,220 8,220 L423,220 Z M113.444928,142.36262 C113.156682,143.188407 113,144.075906 113,145 L113,206 L70,206 L70,144 C70,143.795056 70.0077065,143.591912 70.0228454,143.390842 C71.4148047,63.9610417 136.237951,0 216,0 C295.762049,0 360.585195,63.9610417 361.977154,143.390839 C361.992294,143.591912 362,143.795056 362,144 L362,206 L319,206 L319,145 C319,144.075906 318.843318,143.188407 318.555072,142.36262 C313.695864,89.9961937 269.635519,49 216,49 C162.364481,49 118.304136,89.9961937 113.444929,142.362617 Z" id="Combined-Shape" fill="#545454" opacity="0.595412908"></path>
+            <path d="M193.923981,350.292794 C187.830629,344.801826 184,336.848259 184,328 C184,311.431458 197.431458,298 214,298 C230.568542,298 244,311.431458 244,328 C244,336.712195 240.286276,344.557002 234.355509,350.037741 L245.167969,415 L183,415 L193.923988,350.292801 Z" id="Combined-Shape" fill="#FFFFFF" opacity="0.801897321"></path>
+        </g>
+    </g>
+</svg>
