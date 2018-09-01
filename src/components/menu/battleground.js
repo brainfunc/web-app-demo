@@ -8,6 +8,7 @@ import InstructionsComponent from './battleground/instructions';
 import BattleCoreComponent from './battleground/battle_core';
 import ResultsComponent from './battleground/results';
 
+import * as Utils from '../../utils/utils';
 import * as Constants from '../../utils/data';
 import * as Instructions from '../../utils/data/battles/instructions';
 import Divider from './my_collectibles/common/divider';
@@ -31,7 +32,11 @@ export default class Battleground extends Component {
   }
 
   StartBattle() {
-    this.setState({currentBattleState: "started"});
+    this.setState({
+      currentBattleState: "started",
+      userCombination: [],
+      battleId: Utils.GetCurrentBattleId()
+    });
   }
 
   EndBattle(combination, battleId) {
@@ -53,6 +58,7 @@ export default class Battleground extends Component {
               StartBattleFunction={this.StartBattle}/>)
     } else  if(this.state.currentBattleState == "started") {
       return(<BattleCoreComponent
+              battleId={this.state.battleId}
               EndBattleFunction={this.EndBattle}/>);
     } else if(this.state.currentBattleState == "ended") {
       return(<ResultsComponent

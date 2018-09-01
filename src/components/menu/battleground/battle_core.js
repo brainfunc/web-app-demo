@@ -15,13 +15,13 @@ export const BattleTaskComponent = function(props) {
         Which parts could be involved in this activity?
       </div>
       <div className='task-image-container'>
-        <img className='task-image' src={Tasks.Data.tasks[0].image}/>
+        <img className='task-image' src={Tasks.Data.tasks[props.battleId].image}/>
       </div>
       <div className='task-title'>
-        {Tasks.Data.tasks[0].title}
+        {Tasks.Data.tasks[props.battleId].title}
       </div>
       <div className='task-description'>
-        {Tasks.Data.tasks[0].description}
+        {Tasks.Data.tasks[props.battleId].description}
       </div>
     </div>
   );
@@ -119,12 +119,13 @@ export default class BattleCoreComponent extends Component {
   }
 
   render(){
-    console.log("Battle Core State", this.state.partsSelected);
+    // onsole.log("Battle Core State", this.state.partsSelected);
     return(
       <div className='body'>
 
         <div className='battle_core'>
-          <BattleTaskComponent/>
+          <BattleTaskComponent
+            battleId = {this.props.battleId}/>
           <div className='part-chooser'>
 
             <div className='title'>

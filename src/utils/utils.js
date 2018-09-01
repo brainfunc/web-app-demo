@@ -1,4 +1,5 @@
 import * as Collectibles from "./data/collectibles";
+import * as Tasks from "./data/battles/tasks";
 
 export const GetSortOrder = (prop) => {
   return function(a, b) {
@@ -66,4 +67,9 @@ export const GetResultOfBattle = function(
     }
   }
   return result;
+}
+
+export const GetCurrentBattleId = function() {
+  const max = Tasks.Data.tasks.length; const min = 0;
+  return Math.floor(Math.random() * (max - min)) + min;
 }
