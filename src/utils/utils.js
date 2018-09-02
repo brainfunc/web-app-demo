@@ -79,5 +79,5 @@ export const SetBarCompletionValue = function(subcategory, newValue) {
 }
 
 export const GetBarCompletionValue = function(subcategory) {
-  return 50;
+  return 75;
 }

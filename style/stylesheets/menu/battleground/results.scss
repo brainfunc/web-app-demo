@@ -135,13 +135,29 @@
 
             >div.progress-container{
               width:100%;
+              margin-top: 2vw;
               text-align: center;
+              >button.level-up-button{
+              height: 3.5vw;
+              border-radius: 0.75vw;
+              padding: 0.5vw;
+              padding-left: 1.5vw;
+              padding-right: 1.5vw;
+              color: white;
+              box-shadow: 0 0.5em 1.5em 0 rgba(0,0,0,0.1);
+              font-size: 1.5vw;
+              font-family: $font_family_1;
+              background-color: $button_color_purple;
+              border: 2px solid $border_color_dark_purple;
+              }
+              >button.level-up-button:hover{
+                opacity: 0.75;
+              }
               >div.decrease,
               >div.increase{
                 height: 1.75vw;
                 width:100%;
                 border-radius: 1vw;
-                margin-top: 2vw;
                 >div{ height: 100%; border-radius: 1vw;}
                 >div.val0 { width: 0%; }
                 >div.val25 { width:25%; }

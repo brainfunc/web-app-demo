@@ -22,6 +22,41 @@ export const ProgressBar = function(props) {
   );
 }
 
+
+
+export class ProgressComponent extends Component {
+  constructor(props) {
+    super(props);
+
+    this.LevelUpClicked = this.LevelUpClicked.bind(this);
+  }
+
+  LevelUpClicked() {
+    console.log("Level Up Clicked");
+    // this.props.LevelUpFunction();
+  }
+
+  render() {
+    const value = this.props.value;
+    const status = this.props.status;
+    if(value == 100) {
+      return(
+        <div className='progress-container'>
+          <button className='level-up-button'
+          onClick={this.LevelUpClicked}>
+            Level Up
+          </button>
+        </div>
+      );
+    } else {
+      return (<ProgressBar
+        status={status} value={value}/>);
+    }
+  }
+}
+
+
+
 export const PartResultCard = function(props) {
   const part = Utils.GetBrainPartItemWithSubcategoryInArray(
     props.partSubcategory, Collectibles.Data.Brainparts);
@@ -59,7 +94,8 @@ export const PartResultCard = function(props) {
       </div>
       <div className='level-up-details-container'>
         <img className='stars' src={`/style/images/icons/stars.png`}/>
-        <ProgressBar status={props.status} value={newValue}/>
+        <ProgressComponent
+        status={props.status} value={newValue}/>
       </div>
     </div>
   );

@@ -93,13 +93,27 @@
           width: 100%; }
         .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container {
           width: 100%;
+          margin-top: 2vw;
           text-align: center; }
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > button.level-up-button {
+            height: 3.5vw;
+            border-radius: 0.75vw;
+            padding: 0.5vw;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            color: white;
+            box-shadow: 0 0.5em 1.5em 0 rgba(0, 0, 0, 0.1);
+            font-size: 1.5vw;
+            font-family: "Avenir", sans-serif;
+            background-color: #9a8be2;
+            border: 2px solid #5E4DC3; }
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > button.level-up-button:hover {
+            opacity: 0.75; }
           .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease,
           .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase {
             height: 1.75vw;
             width: 100%;
-            border-radius: 1vw;
-            margin-top: 2vw; }
+            border-radius: 1vw; }
             .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div,
             .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div {
               height: 100%;
