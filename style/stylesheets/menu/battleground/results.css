@@ -94,27 +94,36 @@
         .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container {
           width: 100%;
           text-align: center; }
-          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container div {
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease,
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase {
             height: 1.75vw;
             width: 100%;
-            border-radius: 1vw; }
-          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.decrease {
-            width: 100%;
-            margin-top: 2vw;
+            border-radius: 1vw;
+            margin-top: 2vw; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div,
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div {
+              height: 100%;
+              border-radius: 1vw; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div.val0,
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div.val0 {
+              width: 0%; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div.val25,
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div.val25 {
+              width: 25%; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div.val50,
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div.val50 {
+              width: 50%; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div.val75,
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div.val75 {
+              width: 75%; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div.val100,
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div.val100 {
+              width: 100%; }
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease {
             background-color: #F8BEA0; }
-            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.decrease > div.progress-previous {
-              width: 80%;
-              background-color: #f47b79; }
-              .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.decrease > div.progress-previous > div.progress-current {
-                width: 50%;
-                background-color: #ec1943; }
-          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.increase {
-            width: 100%;
-            margin-top: 2vw;
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.decrease > div.progress-current {
+              background-color: #ec1943; }
+          .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase {
             background-color: #B8F8A0; }
-            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.increase > div.progress-previous {
-              width: 80%;
-              background-color: #98d481; }
-              .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.progress-base.increase > div.progress-previous > div.progress-current {
-                width: 100%;
-                background-color: #6E9F5C; }
+            .battleground__container > div.body > div.results > div.partwise-results-container > div.part-result-card > div.level-up-details-container > div.progress-container > div.increase > div.progress-current {
+              background-color: #6E9F5C; }

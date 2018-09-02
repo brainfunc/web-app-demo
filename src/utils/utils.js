@@ -73,3 +73,11 @@ export const GetCurrentBattleId = function() {
   const max = Tasks.Data.tasks.length; const min = 0;
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+export const SetBarCompletionValue = function(subcategory, newValue) {
+  return true;
+}
+
+export const GetBarCompletionValue = function(subcategory) {
+  return 50;
+}

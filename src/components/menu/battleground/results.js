@@ -9,13 +9,13 @@ export const ProgressBar = function(props) {
   var barClass;
   if(props.status == "correct") { barClass = "increase"; }
   else { barClass = "decrease"; }
+
   console.log("Bar Class", barClass);
+  console.log("New Value", props.value);
   return(
     <div className='progress-container'>
       <div className={`progress-base ${barClass}`}>
-        <div className='progress-previous'>
-          <div className='progress-current'>
-          </div>
+        <div className={`progress-current val${props.value}`}>
         </div>
       </div>
     </div>
@@ -23,22 +23,29 @@ export const ProgressBar = function(props) {
 }
 
 export const PartResultCard = function(props) {
+  const part = Utils.GetBrainPartItemWithSubcategoryInArray(
+    props.partSubcategory, Collectibles.Data.Brainparts);
+  console.log("Part", part);
   console.log("Card Props", props);
-  var tickImageSrc, description;
+  var tickImageSrc, description, newValue;
   if(props.status == "correct") {
     tickImageSrc = `/style/images/icons/tick.png`;
     description = `Congrats! You chose this part correctly. You have
       strengthened your brainpart. You can see the progress indicator until
       you level up to the next strength level to your right. `;
+    var barCompletionValue = Utils.GetBarCompletionValue(part.subcategory);
+    newValue = Math.min(barCompletionValue + 25, 100);
+    Utils.SetBarCompletionValue(part.subcategory, newValue);
   } else {
     tickImageSrc = `/style/images/icons/wrong.png`;
     description = `Sorry! You chose this part incorrectly. You have
       weakened your brainpart. You can see the progress indicator until
       you level up to the next strength level to your right. `;
+    var barCompletionValue = Utils.GetBarCompletionValue(part.subcategory);
+    newValue = Math.max(barCompletionValue - 25, 0);
+    Utils.SetBarCompletionValue(part.subcategory, newValue);
   }
-  const part = Utils.GetBrainPartItemWithSubcategoryInArray(
-    props.partSubcategory, Collectibles.Data.Brainparts);
-  console.log("Part", part);
+
   return (
     <div className='part-result-card'>
       <div className='brainpart-image-container'>
@@ -52,7 +59,7 @@ export const PartResultCard = function(props) {
       </div>
       <div className='level-up-details-container'>
         <img className='stars' src={`/style/images/icons/stars.png`}/>
-        <ProgressBar status={props.status}/>
+        <ProgressBar status={props.status} value={newValue}/>
       </div>
     </div>
   );
@@ -98,10 +105,11 @@ export default class ResultsComponent extends Component {
   render(){
     //console.log(Tasks.Data.tasks[this.props.battleId].correctCombination);
     const submittedCombination = this.props.submittedCombination;
-    const correctCombination = Tasks.Data.tasks[this.props.battleId].correctCombination;
-    const result = Utils.GetResultOfBattle("23",
+    //const correctCombination = Tasks.Data.tasks[this.props.battleId].correctCombination;
+    const correctCombination = [1,2,3,4];
+    const result = Utils.GetResultOfBattle("<Sample Timestamp>",
       this.props.submittedCombination,
-      Tasks.Data.tasks[this.props.battleId].correctCombination);
+      correctCombination);
     const score = Number(result.correct.length).toFixed(1);
     const percentage = Number(score/(correctCombination.length*1.0) * 100).toFixed(2);
     console.log("Result", result);

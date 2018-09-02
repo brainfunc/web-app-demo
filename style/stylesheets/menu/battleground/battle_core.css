@@ -24,6 +24,8 @@
       padding: 0.25vw;
       width: 100%;
       margin: 8% 0% 8% 0%; }
+      .battleground__container > div.body > div.battle_core > div.battle-task > div.task-image-container > img {
+        max-width: 100%; }
     .battleground__container > div.body > div.battle_core > div.battle-task > div.task-title {
       font-family: "Avenir", sans-serif;
       font-size: 2.35vw;

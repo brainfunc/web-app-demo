@@ -34,6 +34,9 @@
           padding: 0.25vw;
           width: 100%;
           margin:8% 0% 8% 0%;
+          >img{
+            max-width: 100%;
+          }
         }
         >div.task-title {
           font-family: $font_family_1;
