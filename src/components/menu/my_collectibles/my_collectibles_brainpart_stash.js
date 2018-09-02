@@ -322,7 +322,7 @@ export default class BrainpartStash extends Component {
         universeTitle = "Neurons Unvailable";
         universeDesc = `You have no neurons of this type`;
       } else {
-        universeImgSrc = `/style/images/icons/neurons_qty.png`;
+        universeImgSrc = `/style/images/icons/neurons_qty_brainstash.png`;
         universeTitle = "Neurons Available";
         universeDesc = `You have ${neuronItem.quantity} neurons of this type`;
       }
