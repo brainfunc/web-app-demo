@@ -78,7 +78,9 @@ export default class BrainpartStash extends Component {
   }
 
   componentDidMount() {
+    console.log("Component mounted!");
     if(!this.props.isBrainpartsSet){
+      console.log("Fetching and Setting Brainparts...");
       this.FetchAndSetBrainparts()
     }
     this.StartListeningForEvents();

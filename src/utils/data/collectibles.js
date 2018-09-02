@@ -110,7 +110,7 @@ export const Data = {
       categoryIndex: 4,
       subcategoryIndex:13,
       quantity:0,
-      image: "/style/images/collectibles/neurons/soulneuron.png",
+      image: "/style/images/collectibles/neurons/unavailableNeuron.png",
     }
   ],
   Brainparts:[

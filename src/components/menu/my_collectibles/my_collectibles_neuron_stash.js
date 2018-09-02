@@ -84,7 +84,9 @@ export default class NeuronStash extends Component {
   }
 
   componentDidMount() {
+    console.log("Component mounted!");
     if(!this.props.isNeuronsSet){
+      console.log("Fetching and Setting Neurons...");
       this.FetchAndSetNeurons()
     }
   }
