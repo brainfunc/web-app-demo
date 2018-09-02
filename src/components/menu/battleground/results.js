@@ -143,8 +143,8 @@ export default class ResultsComponent extends Component {
   render(){
     //console.log(Tasks.Data.tasks[this.props.battleId].correctCombination);
     const submittedCombination = this.props.submittedCombination;
-    //const correctCombination = Tasks.Data.tasks[this.props.battleId].correctCombination;
-    const correctCombination = [1,2,3,4];
+    const correctCombination = Tasks.Data.tasks[this.props.battleId].correctCombination;
+    //const correctCombination = [1,2,3,4];
     const result = Utils.GetResultOfBattle("<Sample Timestamp>",
       this.props.submittedCombination,
       correctCombination);
