@@ -120,6 +120,8 @@ export default class BattleCoreComponent extends Component {
 
   render(){
     // onsole.log("Battle Core State", this.state.partsSelected);
+    console.log("Props", this.props);
+    console.log("Passed BattleId", this.props.battleId);
     return(
       <div className='body'>
 

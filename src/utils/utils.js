@@ -71,7 +71,9 @@ export const GetResultOfBattle = function(
 
 export const GetCurrentBattleId = function() {
   const max = Tasks.Data.tasks.length; const min = 0;
-  return Math.floor(Math.random() * (max - min)) + min;
+  const battleId  = Math.floor(Math.random() * (max - min)) + min;
+  console.log("Generated battle id", battleId);
+  return battleId;
 }
 
 export const SetBarCompletionValue = function(subcategoryIndex, newValue) {

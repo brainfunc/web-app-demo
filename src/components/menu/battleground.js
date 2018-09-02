@@ -50,8 +50,9 @@ export default class Battleground extends Component {
 
   SetBrainparts(brainparts) {
     console.log("Setting brainparts!");
-    this.setState({ isBrainpartsSet: true, brainparts });
-
+    this.setState({ isBrainpartsSet: true,
+      battleId: Utils.GetCurrentBattleId(),
+      brainparts });
   }
 
   FetchAndSetBrainparts() {
@@ -168,8 +169,7 @@ export default class Battleground extends Component {
   StartBattle() {
     this.setState({
       currentBattleState: "started",
-      userCombination: [],
-      battleId: Utils.GetCurrentBattleId()
+      userCombination: []
     });
   }
 
@@ -177,8 +177,7 @@ export default class Battleground extends Component {
     console.log("Submitted Combination", combination);
     this.setState({
       currentBattleState: "ended",
-      userCombination: combination,
-      battleId
+      userCombination: combination
     });
   }
 
@@ -189,11 +188,12 @@ export default class Battleground extends Component {
   RenderBody() {
     if(this.state.currentBattleState == "ready") {
       return(<InstructionsComponent
+              battleId = {this.state.battleId}
               StartBattleFunction={this.StartBattle}/>)
     } else  if(this.state.currentBattleState == "started") {
       return(<BattleCoreComponent
               brainparts={this.state.brainparts}
-              battleId={this.state.battleId}
+              battleId = {this.state.battleId}
               EndBattleFunction={this.EndBattle}/>);
     } else if(this.state.currentBattleState == "ended") {
       return(<ResultsComponent

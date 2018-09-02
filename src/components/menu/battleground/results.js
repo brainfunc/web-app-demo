@@ -145,6 +145,9 @@ export default class ResultsComponent extends Component {
     const submittedCombination = this.props.submittedCombination;
     const correctCombination = Tasks.Data.tasks[this.props.battleId].correctCombination;
     //const correctCombination = [1,2,3,4];
+    console.log("Submitted Combination", submittedCombination);
+    console.log("BattleId", this.props.battleId);
+    console.log("Correct Combination", correctCombination);
     const result = Utils.GetResultOfBattle("<Sample Timestamp>",
       this.props.submittedCombination,
       correctCombination);
