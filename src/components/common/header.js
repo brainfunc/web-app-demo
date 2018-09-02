@@ -81,9 +81,9 @@ class Header extends Component {
 
               <div className='menu-item'><a target='_blank' href={Links.header.how_to_play}>Play Tutorial </a></div>
               <div className='menu-item'><a target='_blank' href={Links.header.library}> Library </a></div>
-              <div className='menu-item'><Link to={Links.header.battleground}> Battles </Link></div>
-              <div className='menu-item'><Link to={Links.header.marketplace}> Store </Link></div>
-              <div className='menu-item'><Link to={Links.header.my_collectibles}> My Stash </Link></div>
+              <div className='menu-item'><a target='_top' href={Links.header.battleground}> Battles </a></div>
+              <div className='menu-item'><a target='_top' href={Links.header.marketplace}> Store </a></div>
+              <div className='menu-item'><a target='_top' href={Links.header.my_collectibles}> My Stash </a></div>
             </div>
           </div>
       </div>
