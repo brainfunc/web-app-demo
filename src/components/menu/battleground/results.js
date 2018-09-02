@@ -63,23 +63,24 @@ export const PartResultCard = function(props) {
   console.log("Part", part);
   console.log("Card Props", props);
   var tickImageSrc, description, newValue;
+  var barCompletionValue = Number(
+    Utils.GetBarCompletionValue(part.subcategoryIndex));
   if(props.status == "correct") {
     tickImageSrc = `/style/images/icons/tick.png`;
     description = `Congrats! You chose this part correctly. You have
       strengthened your brainpart. You can see the progress indicator until
       you level up to the next strength level to your right. `;
-    var barCompletionValue = Utils.GetBarCompletionValue(part.subcategory);
     newValue = Math.min(barCompletionValue + 25, 100);
-    Utils.SetBarCompletionValue(part.subcategory, newValue);
   } else {
     tickImageSrc = `/style/images/icons/wrong.png`;
     description = `Sorry! You chose this part incorrectly. You have
       weakened your brainpart. You can see the progress indicator until
       you level up to the next strength level to your right. `;
-    var barCompletionValue = Utils.GetBarCompletionValue(part.subcategory);
+    var barCompletionValue = Utils.GetBarCompletionValue(part.subcategoryIndex);
     newValue = Math.max(barCompletionValue - 25, 0);
-    Utils.SetBarCompletionValue(part.subcategory, newValue);
   }
+  Utils.SetBarCompletionValue(part.subcategoryIndex, newValue);
+
 
   return (
     <div className='part-result-card'>

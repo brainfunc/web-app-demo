@@ -74,10 +74,24 @@ export const GetCurrentBattleId = function() {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-export const SetBarCompletionValue = function(subcategory, newValue) {
-  return true;
+export const SetBarCompletionValue = function(subcategoryIndex, newValue) {
+  var evolutions = GetEvolutions();
+  evolutions[subcategoryIndex] = newValue;
+  return localStorage.setItem('bf_evolutions', evolutions);
 }
 
-export const GetBarCompletionValue = function(subcategory) {
-  return 75;
+export const GetBarCompletionValue = function(subcategoryIndex) {
+  var evolutions = GetEvolutions();
+  return evolutions[subcategoryIndex];
+}
+
+const GetEvolutions = function() {
+  // Set if null
+  var evolutions = localStorage.getItem('bf_evolutions');
+  if(!evolutions){
+    evolutions = [];
+    for(var i = 0; i < 14; i++){ evolutions.push(0); }
+    localStorage.setItem('bf_evolutions', JSON.stringify(evolutions));
+  }
+  return localStorage.getItem('bf_evolutions').split(",");
 }
