@@ -215,6 +215,15 @@ export default class NeuronStash extends Component {
 
   render() {
     // Logging the state
+    if(!this.props.isNeuronsSet) {
+      return(
+        <div className='neuron_stash__container'>
+          <div className='loader-container'>
+            <img className='loader' src="/style/images/loader.gif"/>
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div className='neuron_stash__container'>

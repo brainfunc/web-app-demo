@@ -1,5 +1,13 @@
 .neuron_stash__container {
   overflow: hidden; }
+  .neuron_stash__container > div.loader-container {
+    width: 100%;
+    height: 25vw;
+    text-align: center;
+    background-color: white; }
+    .neuron_stash__container > div.loader-container > img.loader {
+      height: 25%;
+      margin-top: 10%; }
   .neuron_stash__container > div.title {
     display: inline;
     float: left;

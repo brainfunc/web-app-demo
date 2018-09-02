@@ -1,5 +1,13 @@
 .exchange__container {
   overflow: hidden; }
+  .exchange__container > div.loader-container {
+    width: 100%;
+    height: 25vw;
+    text-align: center;
+    background-color: white; }
+    .exchange__container > div.loader-container > img.loader {
+      height: 25%;
+      margin-top: 10%; }
   .exchange__container > div.title {
     display: inline;
     float: left;

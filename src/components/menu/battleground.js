@@ -24,7 +24,8 @@ export default class Battleground extends Component {
     this.state = {
       currentBattleState: "ready",
       userCombination: [],
-      battleId: -1
+      battleId: -1,
+      isBrainpartsSet: false
     }
 
     this.StartBattle = this.StartBattle.bind(this);
@@ -49,7 +50,8 @@ export default class Battleground extends Component {
 
   SetBrainparts(brainparts) {
     console.log("Setting brainparts!");
-    this.setState({ brainparts });
+    this.setState({ isBrainpartsSet: true, brainparts });
+
   }
 
   FetchAndSetBrainparts() {
@@ -202,6 +204,15 @@ export default class Battleground extends Component {
   }
 
   render() {
+    if(!this.state.isBrainpartsSet) {
+      return(
+        <div className='battleground__container'>
+          <div className='loader-container'>
+            <img className='loader' src="/style/images/loader.gif"/>
+          </div>
+        </div>
+      );
+    }
     var title;
     if(this.state.currentBattleState == "ended") { title = "Results"; }
     else { title = "Battleground"}

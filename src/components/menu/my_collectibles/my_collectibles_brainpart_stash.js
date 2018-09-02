@@ -283,6 +283,16 @@ export default class BrainpartStash extends Component {
   }
 
   render() {
+    if(!this.props.isBrainpartsSet) {
+      return(
+        <div className='brainpart_stash__container'>
+          <div className='loader-container'>
+            <img className='loader' src="/style/images/loader.gif"/>
+          </div>
+        </div>
+      );
+    }
+
     console.log(this.props);
     var imageSrc, boostOrUnlockButtonText,boostOrUnlockButtonClass,
     description,lockLabelClass, lockLabelDivText;
@@ -327,8 +337,8 @@ export default class BrainpartStash extends Component {
         universeDesc = `You have ${neuronItem.quantity} neurons of this type`;
       }
     }
-
     return (
+
       <div className='brainpart_stash__container'>
         <div className="brainpart_detail_container">
           <div className="image_container">

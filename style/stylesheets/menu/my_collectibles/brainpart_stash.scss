@@ -2,6 +2,17 @@
 
 .brainpart_stash__container {
   overflow: hidden;
+  >div.loader-container{
+    //border: 1px solid black;
+    width: 100%;
+    height: 25vw;
+    text-align: center;
+    background-color: white;
+    >img.loader{
+      height: 25%;
+      margin-top: 10%;
+    }
+  }
   >div.brainpart_detail_container {
     border-bottom: 2px solid $background_color_cream;
     padding-bottom: 3vw;
