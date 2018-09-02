@@ -85,7 +85,7 @@ export default class BattleCoreComponent extends Component {
     this.state = {
       partsSelected: [],
       selectedPage: 1,
-      brainparts: Collectibles.Data.Brainparts
+      brainparts: this.props.brainparts
       .sort(Utils.GetSortOrder("strength"))
       .reverse()
     }
