@@ -136,6 +136,7 @@ export default class ResultsComponent extends Component {
 
   HandleTakeAgainClicked() {
     console.log("Take again clicked");
+    window.location.reload();
   }
 
   render(){

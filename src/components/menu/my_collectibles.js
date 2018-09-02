@@ -47,10 +47,16 @@ export default class MyCollectibles extends Component {
     this.renderActiveComponent = this.renderActiveComponent.bind(this);
 
     this.InitializeWallet = this.InitializeWallet.bind(this);
+    this.HandleBuyNeuronsClicked = this.HandleBuyNeuronsClicked.bind(this);
   }
 
   componentDidMount() {
     this.InitializeWallet()
+  }
+
+  HandleBuyNeuronsClicked() {
+    console.log("Buy Neurons Clicked!");
+    // this.context.history.push("/store");
   }
 
   InitializeWallet() {
@@ -82,8 +88,10 @@ export default class MyCollectibles extends Component {
 
     const walletAddress = web3.eth.defaultAccount;
     this.setWalletAddressForProfile(walletAddress);
-    this.setNeuronBalanceForProfile(walletAddress, neuronContractInstance, neuronBalanceCallback);
-    this.setBrainpartBalanceForProfile(walletAddress, brainpartContractInstance, brainpartBalanceCallback);
+    this.setNeuronBalanceForProfile(
+      walletAddress, neuronContractInstance, neuronBalanceCallback);
+    this.setBrainpartBalanceForProfile(
+      walletAddress, brainpartContractInstance, brainpartBalanceCallback);
   }
 
   setWalletAddressForProfile(walletAddress) {
@@ -187,9 +195,11 @@ export default class MyCollectibles extends Component {
             </div>
           </div>
           <div className="action_container">
-            <button className="action_button">
-              Buy Neurons
-            </button>
+            <a href="/marketplace">
+              <button className="action_button" onClick={this.HandleBuyNeuronsClicked}>
+                Buy Neurons
+              </button>
+            </a>
           </div>
         </div>
 
