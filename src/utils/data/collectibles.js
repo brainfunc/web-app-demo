@@ -122,6 +122,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/leftfrontal.png",
+      tokenId: "",
       description: `Performs core cognition function - Most important part, that
       controls important cognitive skills in humans, such as emotional expression,
       problem solving, memory, language, judgment, and sexual behaviors. The left part
@@ -135,6 +136,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/rightfrontal.png",
+      tokenId: "",
       description: `Performs core cognition function - Most important part, that
       controls important cognitive skills in humans, such as emotional expression,
       problem solving, memory, language, judgment, and sexual behaviors. The right part
@@ -148,6 +150,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/pareital.png",
+      tokenId: "",
       description: `Involved in time keeping - The parietal lobes can be divided
       into two functional regions. One involves sensation and perception and the
       other is concerned with integrating sensory inputm. The first function
@@ -163,6 +166,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/temporal.png",
+      tokenId: "",
       description: `Auditory / Hearing functions - The temporal lobe is involved
       in primary auditory perception, such as hearing, and holds the primary auditory
       cortex. The primary auditory cortex receives sensory information from the
@@ -177,6 +181,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/occipital.png",
+      tokenId: "",
       description: `Visual processing function - The occipital lobe is one of the
       four major lobes of the cerebral cortex in the brain of mammals. The occipital
       lobe is the visual processing center of the mammalian brain containing most
@@ -190,6 +195,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/anteriorlobe.png",
+      tokenId: "",
       description: `Regulates posture - The hemispheres are separated from one
       another by a thin structure called the vermis, or "worm." The anterior lobe,
       or paleocerebellum, is the second oldest part of the cerebellum. It receives
@@ -204,6 +210,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/posteriorlobe.png",
+      tokenId: "",
       description: `Involved in Kidney and Urinary function - Two hormones are
       classically considered as being related to the posterior pituitary: oxytocin
       and vasopressin. These hormones are created in the hypothalamus and released
@@ -218,6 +225,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/flocculonodularlobe.png",
+      tokenId: "",
       description: `Involved in visual processing - The flocculus is a part of
       the vestibuloocular reflex system and is used to help stabilize gaze during
       head rotation about any axis of space. Neurons in both the vermis of cerebellum
@@ -231,6 +239,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/midbrain.png",
+      tokenId: "",
       description: `Involved in Auditory Processing - Midbrain, also called mesencephalon,
       region of the developing vertebrate brain that is composed of the tectum and
       tegmentum. The midbrain serves important functions in motor movement, particularly
@@ -244,6 +253,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/pons.png",
+      tokenId: "",
       description: `Muscle communication, balance co-ordinator - Besides the medulla oblongata,
       your brainstem also has a structure called the pons. The pons is a major structure
       in the upper part of your brainstem. It is involved in the control of breathing,
@@ -257,6 +267,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/medulla.png",
+      tokenId: "",
       description: `Info carrier for body - The medulla oblongata helps regulate breathing,
       heart and blood vessel function, digestion, sneezing, and swalLow Strengthing.
       This part of the brain is a center for respiration and circulation. Sensory and motor
@@ -270,6 +281,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "3",
       image: "/style/images/collectibles/brainparts/basilarartery.png",
+      tokenId: "",
       description: `Cognition based blood supply. - The basilar artery carries oxygenated
       blood to the cerebellum, brainstem, and occipital lobes. The cerebellum helps with
       voluntary processes such as posture, balance, coordination, and speech.`
@@ -282,6 +294,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/vertebralartery.png",
+      tokenId: "",
       description: `Dexterity based blood supply - Each vessel courses superiorly along
       each side of the neck, merging within the skull to form the single, midline basilar
       artery. As the supplying component of the vertebrobasilar vascular system, the
@@ -296,6 +309,7 @@ export const Data = {
       strength:"0",
       neuronQuantity: "0",
       image: "/style/images/collectibles/brainparts/soulpart.png",
+      tokenId: "",
       description: ``
     }
   ],
