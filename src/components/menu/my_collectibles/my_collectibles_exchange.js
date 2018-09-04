@@ -287,15 +287,15 @@ export default class Exchange extends Component {
   }
 
   render() {
-    if(!this.props.isBrainpartsSet) {
-      return(
-        <div className='exchange__container'>
-          <div className='loader-container'>
-            <img className='loader' src="/style/images/loader.gif"/>
-          </div>
-        </div>
-      );
-    }
+    // if(!this.props.isBrainpartsSet) {
+    //   return(
+    //     <div className='exchange__container'>
+    //       <div className='loader-container'>
+    //         <img className='loader' src="/style/images/loader.gif"/>
+    //       </div>
+    //     </div>
+    //   );
+    // }
 
     if(this.state.currentPage == "title") {
       return <TitlePage SelectCard={this.SelectCard}

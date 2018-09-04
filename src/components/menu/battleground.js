@@ -204,15 +204,15 @@ export default class Battleground extends Component {
   }
 
   render() {
-    if(!this.state.isBrainpartsSet) {
-      return(
-        <div className='battleground__container'>
-          <div className='loader-container'>
-            <img className='loader' src="/style/images/loader.gif"/>
-          </div>
-        </div>
-      );
-    }
+    // if(!this.state.isBrainpartsSet) {
+    //   return(
+    //     <div className='battleground__container'>
+    //       <div className='loader-container'>
+    //         <img className='loader' src="/style/images/loader.gif"/>
+    //       </div>
+    //     </div>
+    //   );
+    // }
     var title;
     if(this.state.currentBattleState == "ended") { title = "Results"; }
     else { title = "Battleground"}
