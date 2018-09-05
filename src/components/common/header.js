@@ -79,7 +79,7 @@ class Header extends Component {
                   onClick={this.showModal.bind(this)}/>
               </div>
 
-              <div className='menu-item'><a target='_blank' href={Links.header.how_to_play}>Play Tutorial </a></div>
+              <div className='menu-item'><a target='_top' href={Links.header.how_to_play}>Play Tutorial </a></div>
               <div className='menu-item'><a target='_blank' href={Links.header.library}> Library </a></div>
               <div className='menu-item'><a target='_top' href={Links.header.battleground}> Battles </a></div>
               <div className='menu-item'><a target='_top' href={Links.header.marketplace}> Store </a></div>

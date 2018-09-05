@@ -5,6 +5,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 import Home from './components/home';
+import PlayTutorial from './components/menu/play_tutorial';
+
 import Web3ProviderBase from './components/web3providerbase';
 
 import reducers from './reducers';
@@ -16,6 +18,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <Switch>
+        <Route path="/play_tutorial" component={PlayTutorial}/>
         <Route path="/my_collectibles" component={Web3ProviderBase}/>
         <Route path="/marketplace" component={Web3ProviderBase}/>
         <Route path="/battleground" component={Web3ProviderBase}/>

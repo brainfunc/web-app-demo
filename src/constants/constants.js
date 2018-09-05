@@ -4,7 +4,7 @@ export const Links = {
     'my_collectibles': '/my_collectibles',
     'battleground': '/battleground',
     'library':'https://github.com/brainfunc/web-app-demo/blob/master/docs/library.md',
-    'how_to_play':'https://github.com/brainfunc/web-app-demo/blob/master/docs/alto/GameplayDocument.pdf',
+    'how_to_play':'/play_tutorial',
     'team': 'https://github.com/brainfunc/web-app/blob/dev/docs/team.md',
     'blog': 'https://medium.com/brainfunc',
     'jobs': 'https://angel.co/brainfunc/jobs',
