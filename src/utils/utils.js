@@ -31,7 +31,7 @@ export const NeuronSubCategoryCheck = function(categoryIndex, subcategoryIndex) 
   return (subcategoryIndex >= min && subcategoryIndex <= max);
 }
 
-export const BrainpartSubCategoryCheck = function(categoryIndex, subcategoryIndex) {
+export const ItemSubCategoryCheck = function(categoryIndex, subcategoryIndex) {
   var max, min;
   if(categoryIndex == 0) { min = 0; max = 4; }
   else if(categoryIndex == 1) { min = 5; max = 7; }
