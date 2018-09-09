@@ -1,3 +1,8 @@
+export const ITEM_TYPE = {
+  BRAINPART : "brainpart",
+  NEURON : "neuron"
+}
+
 export const Links = {
   'header': {
     'marketplace':'/marketplace',

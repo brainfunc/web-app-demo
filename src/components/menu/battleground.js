@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Header from '../common/header';
 import Footer from '../common/footer';
+import {ITEM_TYPE} from '../../constants/constants';
 
 import InstructionsComponent from './battleground/instructions';
 import BattleCoreComponent from './battleground/battle_core';
@@ -12,7 +13,7 @@ import * as Collectibles from '../../utils/data/collectibles';
 import * as Utils from '../../utils/utils';
 import * as Constants from '../../utils/data';
 import * as Instructions from '../../utils/data/battles/instructions';
-import * as ItemFetcher from '../../modules/blockchain/item_fetcher';
+import {ItemFetcher} from '../../modules/blockchain/item_fetcher';
 
 import Divider from './my_collectibles/common/divider';
 
@@ -48,11 +49,11 @@ export default class Battleground extends Component {
 
   componentDidMount() {
     const self = this;
-    const itemFetcherInstance = new ItemFetcher.ItemFetcher("brainpart", (err, res) => {
+    const itemFetcherInstance = new ItemFetcher(ITEM_TYPE.BRAINPART, (err, res) => {
       if(err) { console.log("Error while fetching brainparts"); return; }
       self.SetBrainparts(res.items)
     });
-    itemFetcherInstance.FetchItems();
+    itemFetcherInstance.fetchItems();
   }
 
   SetBrainparts(brainparts) {

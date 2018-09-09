@@ -3,95 +3,100 @@ import * as Utils from '../../utils/utils';
 import * as Constants from '../../utils/data';
 import * as CONFIG from "../../contracts/config";
 
+import {ITEM_TYPE} from '../../constants/constants';
+
 
 class ItemFetcher {
 
-  constructor(type, callback){
-    this.type = type;
+  constructor(item, callback){
+    this.item = item;
     this.callback = callback;
+    this.totalSupply = -1;
+    this.itemOwnershipMap = [];
+    this.setupItemContract(item);
   }
 
-  FetchItems() {
-    console.log("Loading...");
-    // Fetch items owned using smart contracts
-    // use total supply and owner of
+  setupItemContract(item) {
     const {web3} = window;
-    const itemContract = web3.eth.contract(
-      CONFIG.CONTRACTS.BRAINPART.ABI);
-    const itemContractInstance = itemContract.at(
-      CONFIG.CONTRACTS.BRAINPART.ADDRESS);
-    // console.log(ItemContractInstance);
-    // console.log(web3.eth.defaultAccount);
+    if(item == ITEM_TYPE.BRAINPART) {
+      this.itemContractInstance = web3.eth
+      .contract(CONFIG.CONTRACTS.BRAINPART.ABI)
+      .at(CONFIG.CONTRACTS.BRAINPART.ADDRESS);
+    } else if(item == ITEM_TYPE.NEURON) {
+      this.itemContractInstance = web3.eth
+      .contract(CONFIG.CONTRACTS.NEURON.ABI)
+      .at(CONFIG.CONTRACTS.NEURON.ADDRESS);
+    }
+  }
 
+  fetchItems() {
+    console.log("Loading...");
     var fetchItemsOwnedCallback = function(err, totalSupply) {
       if(err) { console.log(err); console.log("Loading failed.") ;return; }
       // console.log("Total Supply", totalSupply);
-      this.FetchItemsOwned(itemContractInstance, totalSupply);
+      this.totalSupply = totalSupply;
+      this.fetchItemsOwned();
     }
     fetchItemsOwnedCallback = fetchItemsOwnedCallback.bind(this);
 
-    this.FetchTotalSupply(itemContractInstance,fetchItemsOwnedCallback);
+    this.fetchTotalSupply(fetchItemsOwnedCallback);
     // set the state
   }
 
-  FetchTotalSupply(itemContractInstance, callback) {
-    itemContractInstance.totalSupply(function(err, res) {
+  fetchTotalSupply(callback) {
+    this.itemContractInstance.totalSupply(function(err, res) {
       if(err) { callback(err, null); console.log("Loading failed."); return;}
       const totalSupply = res.c[0];
       callback(null, totalSupply);
     });
   }
 
-  FetchItemsOwned(itemContractInstance, totalSupply) {
+  fetchItemsOwned() {
     // console.log("Fetching Items Owned by User...");
     // console.log("Total Supply", totalSupply);
 
-    var itemOwnershipMap = [];
-    for(var i = 0;i < totalSupply; i++) {
-      itemOwnershipMap.push("");
+    for(var i = 0;i < this.totalSupply; i++) {
+      this.itemOwnershipMap.push("");
     }
 
-    this.FetchItemOwners(
-      itemOwnershipMap, itemContractInstance, totalSupply);
+    this.fetchItemOwners();
 
     //console.log(itemOwnershipMap);
   }
 
-  FetchItemOwners(
-    itemOwnershipMap, itemContractInstance, totalSupply) {
+  fetchItemOwners() {
     const {web3} = window;
     var counter = 0;
     var self = this;
     // Usage of let is important here!
-    for(let i = 0; i < totalSupply; i++){
-      itemContractInstance.ownerOf(i,
+    for(let i = 0; i < this.totalSupply; i++){
+      this.itemContractInstance.ownerOf(i,
         function(err, res) {
           if(err) {console.log(err); console.log("Loading failed."); return;}
           //console.log("Owner", i, res);
-          itemOwnershipMap[i] = res;
+          self.itemOwnershipMap[i] = res;
           counter += 1;
-          if(counter == totalSupply) {
-            self.FetchItemTokenIds(
-              itemOwnershipMap, web3.eth.defaultAccount, itemContractInstance)
+          if(counter == self.totalSupply) {
+            self.fetchItemTokenIds(web3.eth.defaultAccount)
           }
         }// end of callback
       );//end of ownerOf
     } // end of for loop
   }
 
-  FetchItemTokenIds(map, accountID, itemContractInstance) {
+  fetchItemTokenIds(accountID) {
     // Logic to compute items owned by current address
     var itemTokenIds = [];
-    for(var i = 0; i < map.length; i++) {
-      if(map[i] == accountID) {
+    for(var i = 0; i < this.itemOwnershipMap.length; i++) {
+      if(this.itemOwnershipMap[i] == accountID) {
         itemTokenIds.push(i);
       }
     }
     if(itemTokenIds.length == 0) { console.log("Loading finished!"); return; }
-    this.FetchItemsData(itemTokenIds, itemContractInstance);
+    this.fetchItemsData(itemTokenIds);
   }
 
-  FetchItemsData(itemTokenIds, itemContractInstance) {
+  fetchItemsData(itemTokenIds) {
     //console.log("Owned item Ids", itemTokenIds);
 
     var counter = 0;
@@ -118,7 +123,7 @@ class ItemFetcher {
     itemFetchCallback.bind(this);
 
     for(let i = 0; i < itemTokenIds.length; i++) {
-      itemContractInstance.brainparts(
+      this.itemContractInstance.brainparts(
         itemTokenIds[i], itemFetchCallback);
     }
   }
