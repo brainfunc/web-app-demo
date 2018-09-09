@@ -48,8 +48,12 @@ export default class Battleground extends Component {
   }
 
   componentDidMount() {
+    const {web3} = window;
     const self = this;
-    const itemFetcherInstance = new ItemFetcher(ITEM_TYPE.BRAINPART, (err, res) => {
+    const itemFetcherInstance
+    = new ItemFetcher(ITEM_TYPE.BRAINPART,
+      web3.eth.defaultAccount,
+      (err, res) => {
       if(err) { console.log("Error while fetching brainparts"); return; }
       self.SetBrainparts(res.items)
     });

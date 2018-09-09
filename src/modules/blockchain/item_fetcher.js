@@ -8,10 +8,11 @@ import {ITEM_TYPE} from '../../constants/constants';
 
 class ItemFetcher {
 
-  constructor(item, callback){
+  constructor(item, account, callback){
     this.item = item;
     this.callback = callback;
     this.totalSupply = -1;
+    this.ownerAccount = account;
     this.itemTokenIdsOwned = [];
     this.itemOwnershipMap = [];
 
@@ -29,6 +30,11 @@ class ItemFetcher {
       .contract(CONFIG.CONTRACTS.NEURON.ABI)
       .at(CONFIG.CONTRACTS.NEURON.ADDRESS);
     }
+  }
+
+  setupOwnerAccount(){
+    const {web3} = window;
+    this.ownerAccount = web3.eth.defaultAccount;
   }
 
   fetchItems() {
@@ -72,7 +78,7 @@ class ItemFetcher {
           self.itemOwnershipMap[i] = res;
           counter += 1;
           if(counter == self.totalSupply) {
-            self.fetchItemTokenIdsOwned(web3.eth.defaultAccount)
+            self.fetchItemTokenIdsOwned(self.ownerAccount)
           }
         }// end of callback
       );//end of ownerOf
