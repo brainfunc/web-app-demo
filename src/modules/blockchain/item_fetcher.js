@@ -32,11 +32,6 @@ class ItemFetcher {
     }
   }
 
-  setupOwnerAccount(){
-    const {web3} = window;
-    this.ownerAccount = web3.eth.defaultAccount;
-  }
-
   fetchItems() {
     console.log("Loading...");
     var callback = function(err, totalSupply) {
@@ -78,14 +73,14 @@ class ItemFetcher {
           self.itemOwnershipMap[i] = res;
           counter += 1;
           if(counter == self.totalSupply) {
-            self.fetchItemTokenIdsOwned(self.ownerAccount)
+            self.setItemTokenIdsOwned(self.ownerAccount)
           }
         }// end of callback
       );//end of ownerOf
     } // end of for loop
   }
 
-  fetchItemTokenIdsOwned(accountID) {
+  setItemTokenIdsOwned(accountID) {
     for(var i = 0;i < this.totalSupply; i++) {
       this.itemOwnershipMap.push("");
     }
