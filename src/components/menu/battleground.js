@@ -61,7 +61,7 @@ export default class Battleground extends Component {
   }
 
   SetBrainparts(brainparts) {
-    console.log("Setting brainparts!");
+    console.log("Setting brainparts...");
     console.log("Brainparts", brainparts);
     this.setState({ isBrainpartsSet: true,
       battleId: Utils.GetCurrentBattleId(),

@@ -133,8 +133,10 @@ class ItemFetcher {
 
   SetItems(items) {
     console.log("Set Items called from item fetcher");
-    console.log("Items", items);
+    console.log("Items fetched successfully:-", items);
+    this.callback(null, {items});
   }
+
 }
 
 module.exports.ItemFetcher = ItemFetcher
