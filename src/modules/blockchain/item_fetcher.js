@@ -97,7 +97,10 @@ class ItemFetcher {
 
   fetchItemsDataOwned() {
     //console.log("Owned item Ids", itemTokenIdsOwned);
-
+    if(this.item == ITEM_TYPE.NEURON) {
+      console.log("Fetching Neuron Data", this);
+      return;
+    }
     var counter = 0;
     var items = Collectibles.Data.Brainparts;
     var self = this;

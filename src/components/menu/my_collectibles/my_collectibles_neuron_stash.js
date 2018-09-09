@@ -7,6 +7,8 @@ import StashBase from "./common/stash_base";
 import PagingBar from "./common/paging_bar";
 
 import * as CONFIG from "../../../contracts/config";
+import {ITEM_TYPE} from '../../../constants/constants';
+import {ItemFetcher} from '../../../modules/blockchain/item_fetcher';
 
 export const NeuronCard = function(props) {
   var imageSrc = "";
@@ -87,7 +89,16 @@ export default class NeuronStash extends Component {
     console.log("Component mounted!");
     if(!this.props.isNeuronsSet){
       console.log("Fetching and Setting Neurons...");
-      this.FetchAndSetNeurons()
+      const {web3} = window;
+      const self = this;
+      const itemFetcherInstance
+      = new ItemFetcher(ITEM_TYPE.NEURON,
+        web3.eth.defaultAccount,
+        (err, res) => {
+        if(err) { console.log("Error while fetching brainparts"); return; }
+        self.props.SetNeurons(res.items)
+      });
+      itemFetcherInstance.fetchItems();
     }
   }
 
