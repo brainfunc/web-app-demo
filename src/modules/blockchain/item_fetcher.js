@@ -13,8 +13,8 @@ class ItemFetcher {
     this.callback = callback;
     this.totalSupply = -1;
     this.itemTokenIdsOwned = [];
+    this.itemOwnershipMap = [];
 
-    this.initializeItemOwnershipMap();
     this.setupItemContract(item);
   }
 
@@ -31,30 +31,26 @@ class ItemFetcher {
     }
   }
 
-  initializeItemOwnershipMap(){
-    this.itemOwnershipMap = [];
-    for(var i = 0;i < this.totalSupply; i++) {
-      this.itemOwnershipMap.push("");
-    }
-  }
-
   fetchItems() {
     console.log("Loading...");
-    var fetchItemsOwnedCallback = function(err, totalSupply) {
-      if(err) { console.log(err); console.log("Loading failed.") ;return; }
+    var callback = function(err, totalSupply) {
+      if(err) { console.log(err);
+        console.log("Loading failed.") ;return; }
       // console.log("Total Supply", totalSupply);
       this.totalSupply = totalSupply;
       this.fetchItemsOwned();
     }
-    fetchItemsOwnedCallback = fetchItemsOwnedCallback.bind(this);
+    callback = callback.bind(this);
 
-    this.fetchTotalSupply(fetchItemsOwnedCallback);
+    this.fetchTotalSupply(callback);
     // set the state
   }
 
   fetchTotalSupply(callback) {
-    this.itemContractInstance.totalSupply(function(err, res) {
-      if(err) { callback(err, null); console.log("Loading failed."); return;}
+    this.itemContractInstance
+    .totalSupply(function(err, res) {
+      if(err) { callback(err, null);
+        console.log("Loading failed."); return;}
       const totalSupply = res.c[0];
       callback(null, totalSupply);
     });
@@ -70,7 +66,8 @@ class ItemFetcher {
     for(let i = 0; i < this.totalSupply; i++){
       this.itemContractInstance.ownerOf(i,
         function(err, res) {
-          if(err) {console.log(err); console.log("Loading failed."); return;}
+          if(err) {console.log(err);
+            console.log("Loading failed."); return;}
           //console.log("Owner", i, res);
           self.itemOwnershipMap[i] = res;
           counter += 1;
@@ -83,13 +80,17 @@ class ItemFetcher {
   }
 
   fetchItemTokenIdsOwned(accountID) {
+    for(var i = 0;i < this.totalSupply; i++) {
+      this.itemOwnershipMap.push("");
+    }
     // Logic to compute items owned by current address
     for(var i = 0; i < this.itemOwnershipMap.length; i++) {
       if(this.itemOwnershipMap[i] == accountID) {
         this.itemTokenIdsOwned.push(i);
       }
     }
-    if(this.itemTokenIdsOwned.length == 0) { console.log("Loading finished!"); return; }
+    if(this.itemTokenIdsOwned.length == 0) {
+      console.log("Loading finished!"); return; }
     this.fetchItemsDataOwned();
   }
 
@@ -100,10 +101,13 @@ class ItemFetcher {
     var items = Collectibles.Data.Brainparts;
     var self = this;
     // console.log(self);
-    var itemFetchCallback = function(err, res) {
-      if(err) {console.log(err); console.log("Loading failed."); return;}
+    var callback = function(err, res) {
+      if(err) {console.log(err);
+        console.log("Loading failed."); return;}
       console.log("item Data", res, counter);
-      const cIndex = res[1]; const scIndex = res[2]; const strength = res[3];
+      const cIndex = res[1];
+      const scIndex = res[2];
+      const strength = res[3];
       // error handling for bad sub categories
       counter += 1;
       if(scIndex == "" || Number(scIndex) == undefined ||
@@ -111,17 +115,18 @@ class ItemFetcher {
       items[scIndex].quantity += 1;
       items[scIndex].strength = strength;
       if(counter == self.itemTokenIdsOwned.length) {
-        self.SetItems(
-          items.sort(Utils.GetSortOrder("strength")).reverse());
+        const itemsSortedByStrength =
+        items.sort(Utils.GetSortOrder("strength"));
+        self.SetItems(itemsSortedByStrength.reverse());
         // console.log(this);
         console.log("Loading finished!");
       }
     }
-    itemFetchCallback.bind(this);
+    callback.bind(this);
 
     for(let i = 0; i < this.itemTokenIdsOwned.length; i++) {
       this.itemContractInstance
-      .brainparts(this.itemTokenIdsOwned[i], itemFetchCallback);
+      .brainparts(this.itemTokenIdsOwned[i], callback);
     }
   }
 
