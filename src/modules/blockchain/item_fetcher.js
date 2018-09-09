@@ -12,7 +12,9 @@ class ItemFetcher {
     this.item = item;
     this.callback = callback;
     this.totalSupply = -1;
-    this.itemOwnershipMap = [];
+    this.itemTokenIdsOwned = [];
+
+    this.initializeItemOwnershipMap();
     this.setupItemContract(item);
   }
 
@@ -26,6 +28,13 @@ class ItemFetcher {
       this.itemContractInstance = web3.eth
       .contract(CONFIG.CONTRACTS.NEURON.ABI)
       .at(CONFIG.CONTRACTS.NEURON.ADDRESS);
+    }
+  }
+
+  initializeItemOwnershipMap(){
+    this.itemOwnershipMap = [];
+    for(var i = 0;i < this.totalSupply; i++) {
+      this.itemOwnershipMap.push("");
     }
   }
 
@@ -51,20 +60,9 @@ class ItemFetcher {
     });
   }
 
+
+
   fetchItemsOwned() {
-    // console.log("Fetching Items Owned by User...");
-    // console.log("Total Supply", totalSupply);
-
-    for(var i = 0;i < this.totalSupply; i++) {
-      this.itemOwnershipMap.push("");
-    }
-
-    this.fetchItemOwners();
-
-    //console.log(itemOwnershipMap);
-  }
-
-  fetchItemOwners() {
     const {web3} = window;
     var counter = 0;
     var self = this;
@@ -77,27 +75,26 @@ class ItemFetcher {
           self.itemOwnershipMap[i] = res;
           counter += 1;
           if(counter == self.totalSupply) {
-            self.fetchItemTokenIds(web3.eth.defaultAccount)
+            self.fetchItemTokenIdsOwned(web3.eth.defaultAccount)
           }
         }// end of callback
       );//end of ownerOf
     } // end of for loop
   }
 
-  fetchItemTokenIds(accountID) {
+  fetchItemTokenIdsOwned(accountID) {
     // Logic to compute items owned by current address
-    var itemTokenIds = [];
     for(var i = 0; i < this.itemOwnershipMap.length; i++) {
       if(this.itemOwnershipMap[i] == accountID) {
-        itemTokenIds.push(i);
+        this.itemTokenIdsOwned.push(i);
       }
     }
-    if(itemTokenIds.length == 0) { console.log("Loading finished!"); return; }
-    this.fetchItemsData(itemTokenIds);
+    if(this.itemTokenIdsOwned.length == 0) { console.log("Loading finished!"); return; }
+    this.fetchItemsDataOwned();
   }
 
-  fetchItemsData(itemTokenIds) {
-    //console.log("Owned item Ids", itemTokenIds);
+  fetchItemsDataOwned() {
+    //console.log("Owned item Ids", itemTokenIdsOwned);
 
     var counter = 0;
     var items = Collectibles.Data.Brainparts;
@@ -113,7 +110,7 @@ class ItemFetcher {
       !Utils.ItemSubCategoryCheck(cIndex, scIndex)) { return; }
       items[scIndex].quantity += 1;
       items[scIndex].strength = strength;
-      if(counter == itemTokenIds.length) {
+      if(counter == self.itemTokenIdsOwned.length) {
         self.SetItems(
           items.sort(Utils.GetSortOrder("strength")).reverse());
         // console.log(this);
@@ -122,9 +119,9 @@ class ItemFetcher {
     }
     itemFetchCallback.bind(this);
 
-    for(let i = 0; i < itemTokenIds.length; i++) {
-      this.itemContractInstance.brainparts(
-        itemTokenIds[i], itemFetchCallback);
+    for(let i = 0; i < this.itemTokenIdsOwned.length; i++) {
+      this.itemContractInstance
+      .brainparts(this.itemTokenIdsOwned[i], itemFetchCallback);
     }
   }
 
