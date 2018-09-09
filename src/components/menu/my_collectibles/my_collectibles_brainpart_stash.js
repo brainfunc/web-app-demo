@@ -65,7 +65,7 @@ export default class BrainpartStash extends Component {
     this.GetSelectedBrainpartState = this.GetSelectedBrainpartState.bind(this);
     this.SetSelectedBrainpart = this.SetSelectedBrainpart.bind(this);
     this.SetSelectedPage = this.SetSelectedPage.bind(this);
-    
+
     this.HandleConstructClick = this.HandleConstructClick.bind(this);
     this.UnlockSelectedBrainpart = this.UnlockSelectedBrainpart.bind(this);
     this.StartListeningForEvents = this.StartListeningForEvents.bind(this);
@@ -169,16 +169,6 @@ export default class BrainpartStash extends Component {
   }
 
   render() {
-    // if(!this.props.isBrainpartsSet) {
-    //   return(
-    //     <div className='brainpart_stash__container'>
-    //       <div className='loader-container'>
-    //         <img className='loader' src="/style/images/loader.gif"/>
-    //       </div>
-    //     </div>
-    //   );
-    // }
-
     console.log(this.props);
     var imageSrc, boostOrUnlockButtonText,boostOrUnlockButtonClass,
     description,lockLabelClass, lockLabelDivText;
