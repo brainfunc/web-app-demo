@@ -273,7 +273,7 @@ export default class BrainpartStash extends Component {
       "ts",categoryIndex,subcategoryIndex,strength,
       "<SampleUri>"
       ,web3.eth.defaultAccount,
-      { from: CONFIG.CONTRACTS.BRAINPART.CREATOR },
+      { from: web3.eth.defaultAccount },
       function(err, res) {
         if(err) { console.log(err); return; }
         // self.setState({currentState: "unlocking"})
