@@ -97,13 +97,16 @@ class ItemFetcher {
 
   fetchItemsDataOwned() {
     //console.log("Owned item Ids", itemTokenIdsOwned);
+    var counter = 0, self = this, items;
+
     if(this.item == ITEM_TYPE.NEURON) {
       console.log("Fetching Neuron Data", this);
+      items = Collectibles.Data.Neurons;
       return;
+    } else if(this.item == ITEM_TYPE.BRAINPART) {
+      console.log("Fetching Brainpart Data", this);
+      items = Collectibles.Data.Brainparts;
     }
-    var counter = 0;
-    var items = Collectibles.Data.Brainparts;
-    var self = this;
     // console.log(self);
     var callback = function(err, res) {
       if(err) {console.log(err);

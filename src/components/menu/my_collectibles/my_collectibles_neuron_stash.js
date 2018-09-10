@@ -213,12 +213,6 @@ export default class NeuronStash extends Component {
     }
   }
 
-  // SetNeurons(neurons) {
-  //   console.log("Loading finished!");
-  //   this.setState({
-  //     neurons: neurons.sort(Utils.GetSortOrder("quantity")).reverse()})
-  // }
-
   SetSelectedPage(page) {
     console.log("Page Switched!", page);
     this.setState({ selectedPage: page })
