@@ -242,12 +242,12 @@ export default class ItemExchanger extends Component {
       const strength = "1"; // 1 since we are only unlocking
 
       console.log(unlockItem);
-
+      console.log("Strenght", strength);
       var self = this;
       brainpartContractInstance.createBrainpart(
         "ts",categoryIndex,subcategoryIndex,strength,
-        "<SampleUri>"
-        ,web3.eth.defaultAccount,
+        "<SampleUri>",
+        web3.eth.defaultAccount,
         { from: web3.eth.defaultAccount },
         function(err, res) {
           if(err) { console.log(err); return; }

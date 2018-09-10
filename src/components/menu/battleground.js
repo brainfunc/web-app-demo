@@ -145,11 +145,11 @@ export default class Battleground extends Component {
     var brainpartFetchCallback = function(err, res) {
       if(err) {console.log(err); console.log("Loading failed."); return;}
       console.log("brainpart Data", res, counter);
-      const cIndex = res[1]; const scIndex = res[2]; const strength = res[3];
+      const cIndex = res[2]; const scIndex = res[3]; const strength = res[4];
       // error handling for bad sub categories
       counter += 1;
-      if(scIndex == "" || Number(scIndex) == undefined ||
-      !Utils.BrainpartSubCategoryCheck(cIndex, scIndex)) { return; }
+      // if(scIndex == "" || Number(scIndex) == undefined ||
+      // !Utils.BrainpartSubCategoryCheck(cIndex, scIndex)) { return; }
       brainparts[scIndex].quantity += 1;
       brainparts[scIndex].strength = strength;
       if(counter == brainpartTokenIds.length) {
