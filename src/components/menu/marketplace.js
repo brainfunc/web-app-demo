@@ -102,12 +102,14 @@ export default class Marketplace extends Component {
     const subcategoryIndex = Utils.GenerateSubCategoryIndex(categoryIndex);
     console.log("categoryIndex", categoryIndex);
     console.log("subcategoryIndex", subcategoryIndex);
+    console.log(web3.eth);
+    console.log(web3.eth.defaultAccount);
     neuronContractInstance.createNeuron(
       "<SampleTimestamp>", `${categoryIndex}`, `${subcategoryIndex}`,
       this.GetNeuronUri(),
       web3.eth.defaultAccount,
       {
-        from:CONFIG.CONTRACTS.NEURON.CREATOR,
+        from:web3.eth.defaultAccount,
         value:web3.toWei(
           `${this.GetTotalAmountToPay()}`,
           "ether")
