@@ -129,9 +129,9 @@ class ItemFetcher {
       if(err) {console.log(err);
         console.log("Loading failed."); return;}
       console.log("item Data", res, counter);
-      const cIndex = res[1];
-      const scIndex = res[2];
-      const strength = res[3];
+      const cIndex = res[2];
+      const scIndex = res[3];
+      const strength = res[4];
       // error handling for bad sub categories
       counter += 1;
       if(scIndex == "" || Number(scIndex) == undefined ||
