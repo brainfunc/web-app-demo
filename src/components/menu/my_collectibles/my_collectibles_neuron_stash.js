@@ -75,14 +75,6 @@ export default class NeuronStash extends Component {
     }
 
     this.SetSelectedPage = this.SetSelectedPage.bind(this);
-
-    this.FetchTotalSupply = this.FetchTotalSupply.bind(this);
-    this.FetchItemsOwned = this.FetchItemsOwned.bind(this);
-    this.FetchItemOwners = this.FetchItemOwners.bind(this);
-    this.FetchItemTokenIds = this.FetchItemTokenIds.bind(this);
-    this.FetchItemsData = this.FetchItemsData.bind(this);
-
-    this.FetchAndSetNeurons = this.FetchAndSetNeurons.bind(this);
   }
 
   componentDidMount() {
@@ -99,117 +91,6 @@ export default class NeuronStash extends Component {
         self.props.SetNeurons(res.items)
       });
       itemFetcherInstance.fetchItems();
-    }
-  }
-
-  FetchAndSetNeurons() {
-    console.log("Loading...");
-    // Fetch neurons owned using smart contracts
-    // use total supply and owner of
-    const {web3} = window;
-    const neuronContract = web3.eth.contract(
-      CONFIG.CONTRACTS.NEURON.ABI);
-    const neuronContractInstance = neuronContract.at(
-      CONFIG.CONTRACTS.NEURON.ADDRESS);
-    // console.log(neuronContractInstance);
-    // console.log(web3.eth.defaultAccount);
-
-    var fetchItemsOwnedCallback = function(err, totalSupply) {
-      if(err) { console.log(err); console.log("Loading failed.") ;return; }
-      // console.log("Total Supply", totalSupply);
-      this.FetchItemsOwned(neuronContractInstance, totalSupply);
-    }
-    fetchItemsOwnedCallback = fetchItemsOwnedCallback.bind(this);
-
-    this.FetchTotalSupply(neuronContractInstance,fetchItemsOwnedCallback);
-    // set the state
-  }
-
-  FetchTotalSupply(neuronContractInstance, callback) {
-    neuronContractInstance.totalSupply(function(err, res) {
-      if(err) { callback(err, null); console.log("Loading failed.") ;return;}
-      const totalSupply = res.c[0];
-      callback(null, totalSupply);
-    });
-  }
-
-  FetchItemsOwned(neuronContractInstance, totalSupply) {
-    // console.log("Fetching Items Owned by User...");
-    // console.log("Total Supply", totalSupply);
-
-    var neuronOwnershipMap = [];
-    for(var i = 0;i < totalSupply; i++) {
-      neuronOwnershipMap.push("");
-    }
-
-    this.FetchItemOwners(
-      neuronOwnershipMap, neuronContractInstance, totalSupply);
-
-    //console.log(neuronOwnershipMap);
-  }
-
-  FetchItemOwners(
-    neuronOwnershipMap, neuronContractInstance, totalSupply) {
-    const {web3} = window;
-    var counter = 0;
-    var instance = this;
-    // Usage of let is important here!
-    for(let i = 0; i < totalSupply; i++){
-      neuronContractInstance.ownerOf(i,
-        function(err, res) {
-          if(err) {console.log(err); console.log("Loading failed.") ;return;}
-          //console.log("Owner", i, res);
-          neuronOwnershipMap[i] = res;
-          counter += 1;
-          if(counter == totalSupply) {
-            instance.FetchItemTokenIds(
-              neuronOwnershipMap, web3.eth.defaultAccount, neuronContractInstance)
-          }
-        }// end of callback
-      );//end of ownerOf
-    } // end of for loop
-  }
-
-  FetchItemTokenIds(map, accountID, neuronContractInstance) {
-    // Logic to compute items owned by current address
-    var itemTokenIds = [];
-    for(var i = 0; i < map.length; i++) {
-      if(map[i] == accountID) {
-        itemTokenIds.push(i);
-      }
-    }
-    if(itemTokenIds.length == 0) { console.log("Loading finished!"); return; }
-    this.FetchItemsData(itemTokenIds, neuronContractInstance);
-  }
-
-  FetchItemsData(neuronTokenIds, neuronContractInstance) {
-    //console.log("Owned Neuron Ids", neuronTokenIds);
-
-    var counter = 0;
-    var neurons = Collectibles.Data.Neurons;
-    var self = this;
-    // console.log(self);
-    var neuronFetchCallback = function(err, res) {
-      if(err) {console.log(err); console.log("Loading failed.") ;return;}
-      // console.log("Neuron Data", res, counter);
-      const cIndex = res[1]; const scIndex = res[2];
-      // error handling for bad sub categories
-      counter += 1;
-      if(scIndex == "" || Number(scIndex) == undefined ||
-      !Utils.NeuronSubCategoryCheck(cIndex, scIndex)) { return; }
-      neurons[scIndex].quantity += 1;
-
-      if(counter == neuronTokenIds.length) {
-        self.props.SetNeurons(
-          neurons.sort(Utils.GetSortOrder("quantity")).reverse());
-        // console.log(this);
-        console.log("Loading finished!");
-      }
-    }
-    neuronFetchCallback.bind(this);
-
-    for(let i = 0; i < neuronTokenIds.length; i++) {
-      neuronContractInstance.neurons(neuronTokenIds[i], neuronFetchCallback);
     }
   }
 
