@@ -33,7 +33,7 @@ export default class BrainpartCard extends Component {
         imageSrc = "/style/images/collectibles/brainparts/unlockableBrainpart.png"
       }
     } else { imageSrc = this.props.part.image }
-
+    console.log("This", this.props.part);
     return(
       <div className="card-4">
         <img className="image"
